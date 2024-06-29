@@ -11,167 +11,414 @@
 
 <body>
     <!-- component -->
-    <header class="header fixed top-0 bg-transparent shadow-md flex items-center justify-between px-2 py-2"
-        style="width: 100%;">
+    <header class="header fixed top-0 shadow-md px-2 py-2 z-10" style="width: 100%;">
         <!-- navigation -->
-        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm">
-            <ul class="flex items-center">
+        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm ">
+            <ul class="flex items-center justify-around content-center lg:px-20">
                 <a href="#home">
                     <li
-                        class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+                        class="p-4 border-b-2 border-white border-opacity-0 hover:border-opacity-100 duration-200 cursor-pointer active">
                         Home
                     </li>
                 </a>
                 <a href="#about">
                     <li
-                        class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+                        class="p-4 border-b-2 border-white border-opacity-0 hover:border-opacity-100 duration-200 cursor-pointer">
                         About
                     </li>
                 </a>
                 <a href="#skills">
                     <li
-                        class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+                        class="p-4 border-b-2 border-white border-opacity-0 hover:border-opacity-100 duration-200 cursor-pointer ">
                         Skills
                     </li>
                 </a>
                 <a href="#project">
                     <li
-                        class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+                        class="p-4 border-b-2 border-white border-opacity-0 hover:border-opacity-100 duration-200 cursor-pointer ">
                         Projects
                     </li>
                 </a>
                 <a href="#contact">
                     <li
-                        class="p-4 border-b-2 border-blue-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-500 duration-200 cursor-pointer active">
+                        class="p-4 border-b-2 border-white border-opacity-0 hover:border-opacity-100 duration-200 cursor-pointer ">
                         Contact Person
                     </li>
                 </a>
     </header>
-
     <!--HomePage-->
-    <div id="home" class="h-[100vh] pt-32">
-        <div class="text-center">
-            <p class="text-5xl font-black">I am Front-End Developer</p>
+    <div id="home" class="h-[100vh]" style="padding-top: 95px;">
+        <div
+            class="flex lg:flex-row md:flex-row sm:flex-col flex-col justify-center lg:gap-20 gap-10 items-center content-center">
+            <div class="text-center no-gap">
+                <p class="lg:text-5xl sm:text-4xl text-3xl font-black">Reza Sapitra</p>
+                <p class="lg:text-4xl sm:text-3xl text-2xl font-extrabold">Designer | Frontend Developer</p>
+            </div>
+            <img src="assets/img/pfp.png" alt="" width="200px" class="border-2 rounded-full shadow-md ">
         </div>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
             class="transition duration-300 ease-in-out delay-150">
             <path
-                d="M 0,400 L 0,150 C 59.51769806233314,150.4873641914933 119.03539612466628,150.9747283829866 165,145 C 210.96460387533372,139.0252716170134 243.37611356366807,126.58845065954692 283,119 C 322.62388643633193,111.41154934045308 369.4601496206614,108.67146897882577 425,102 C 480.5398503793386,95.32853102117423 544.7832879536863,84.72567342515003 599,86 C 653.2167120463137,87.27432657484997 697.4066985645933,100.42583732057416 735,101 C 772.5933014354067,101.57416267942584 803.5899177879406,89.57097729255332 845,116 C 886.4100822120594,142.42902270744668 938.233630283645,207.29025350921253 989,193 C 1039.766369716355,178.70974649078747 1089.4755610774803,85.26800867059661 1141,82 C 1192.5244389225197,78.73199132940339 1245.8641254064344,165.63771180840098 1296,192 C 1346.1358745935656,218.36228819159902 1393.067937296783,184.1811440957995 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none" stroke-width="0" fill="#b6d5eb" fill-opacity="1"
+                d="M 0,600 L 0,150 C 97.57142857142858,185.07142857142856 195.14285714285717,220.14285714285714 309,205 C 422.85714285714283,189.85714285714286 553.0000000000001,124.5 701,122 C 848.9999999999999,119.5 1014.8571428571427,179.85714285714286 1141,195 C 1267.1428571428573,210.14285714285714 1353.5714285714287,180.07142857142856 1440,150 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#29a4c3" fill-opacity="0.53"
                 class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <path
+                d="M 0,600 L 0,350 C 95.85714285714289,319.5 191.71428571428578,289 311,306 C 430.2857142857142,323 572.9999999999998,387.5 717,386 C 861.0000000000002,384.5 1006.2857142857144,317 1127,300 C 1247.7142857142856,283 1343.8571428571427,316.5 1440,350 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#29a4c3" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
         </svg>
     </div>
     <!-- AboutMe -->
-    <div id="about" class=" h-[100vh] pt-32">
+    <div id="about" class=" h-[100vh]" style="padding-top: 90px;">
         <div class="flex px-20 gap-10">
-            <img src="data:image/jpeg;base64,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"
-                alt="">
-            <div class="text-center">
-                <p class="text-4xl font-bold">About</p>
-                <p class="tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio ducimus
-                    odit
-                    dolorem, nobis aut iure, qui, necessitatibus rerum totam laborum dignissimos perspiciatis dolor
-                    recusandae cupiditate placeat et adipisci aliquam!</p>
-                <div class="track flex">
-                    <div class="education">
-                        <p class="text-2xl">Education</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam provident ipsam inventore
-                            earum adipisci hic exercitationem doloribus minima harum obcaecati consequatur modi atque
-                            repellat repudiandae accusamus, molestias sed illo aspernatur?</p>
+            <div class="text-center lg:px-20">
+                <p class="lg:text-4xl sm:text-3xl text-2xl font-bold">About Me</p>
+                <p class="tracking-normal lg:text-2xl sm:text-xl text-md">I'm a Indonesia based frontend developer and
+                    designer,
+                    passionate about attractive displays with bold color combinations. Which will create a
+                    user-friendly, minimalist, and attractive appearance.</p>
+                <br>
+                <p class="tracking-normal lg:text-2xl sm:text-xl text-md">I'm also passionate about fashion modeling,
+                    with my unique style.</p>
+            </div>
+        </div>
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <path
+                d="M 0,600 L 0,150 C 97.57142857142858,185.07142857142856 195.14285714285717,220.14285714285714 309,205 C 422.85714285714283,189.85714285714286 553.0000000000001,124.5 701,122 C 848.9999999999999,119.5 1014.8571428571427,179.85714285714286 1141,195 C 1267.1428571428573,210.14285714285714 1353.5714285714287,180.07142857142856 1440,150 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#318db2" fill-opacity="0.53"
+                class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <path
+                d="M 0,600 L 0,350 C 95.85714285714289,319.5 191.71428571428578,289 311,306 C 430.2857142857142,323 572.9999999999998,387.5 717,386 C 861.0000000000002,384.5 1006.2857142857144,317 1127,300 C 1247.7142857142856,283 1343.8571428571427,316.5 1440,350 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#318db2" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+        </svg>
+    </div>
+    <!-- MySkills -->
+    <div id="skills" class="" style="padding-top: 90px;">
+        <p class="text-4xl font-bold text-center">
+            My Skills
+        </p>
+        <div class="flex flex-wrap items-center content-center justify-center gap-20 pt-10">
+            <div
+                class="relative flex flex-row gap-16 rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md p-8 lg:w-96 md:w-96 sm:w-96 w-96 mx-10">
+                <div>
+                    <div
+                        class="relative m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none bg-clip-border border-white/10">
+                        <p class="block font-sans text-2xl font-normal leading-normal text-white pb-2">
+                            Frontend Developer
+                        </p>
+                        <hr>
+                        <p class="text-white py-2">HTML, CSS, JavaScript</p>
                     </div>
-                    <div class="education">
-                        <p class="text-2xl">Education</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam provident ipsam inventore
-                            earum adipisci hic exercitationem doloribus minima harum obcaecati consequatur modi atque
-                            repellat repudiandae accusamus, molestias sed illo aspernatur?</p>
+                    <div class="p-0">
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 48 48">
+                                    <path fill="#7c4dff"
+                                        d="M7.373,11.443C7.293,9.132,9.094,7,11.529,7h24.946c2.435,0,4.236,2.132,4.155,4.443	c-0.077,2.221,0.023,5.097,0.747,7.443c0.726,2.353,1.951,3.84,3.957,4.031v2.167c-2.006,0.191-3.23,1.678-3.957,4.031	c-0.724,2.345-0.824,5.222-0.747,7.443C40.71,38.868,38.909,41,36.475,41H11.529c-2.434,0-4.236-2.132-4.155-4.443	c0.077-2.221-0.023-5.097-0.747-7.443c-0.726-2.353-1.954-3.84-3.96-4.031v-2.167c2.006-0.191,3.233-1.678,3.96-4.031	C7.35,16.54,7.451,13.664,7.373,11.443z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M27.073,23.464v-0.028c1.853-0.32,3.299-2.057,3.299-3.97c0-1.352-0.52-2.498-1.504-3.312	c-0.981-0.812-2.357-1.241-3.981-1.241H17.45V33.08h7.475c1.942,0,3.555-0.474,4.663-1.372c1.109-0.899,1.696-2.207,1.696-3.783	C31.283,25.544,29.593,23.756,27.073,23.464z M23.59,22.608h-3.181V17.29h3.784c2.076,0,3.219,0.911,3.219,2.565	C27.413,21.63,26.055,22.608,23.59,22.608z M20.409,24.834h3.759c2.716,0,4.092,0.981,4.092,2.916c0,1.932-1.357,2.953-3.925,2.953	h-3.926V24.834z">
+                                    </path>
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    Bootstrap
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 48 48">
+                                    <path fill="#00acc1"
+                                        d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z">
+                                    </path>
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    Tailwind CSS
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 48 48">
+                                    <polygon fill="none" points="26.055,24.519 18.71,37 33.401,37"></polygon>
+                                    <path fill="none"
+                                        d="M14.279,36.641l9.455-16.065l-4.653-7.907L4.762,37h9.366C14.178,36.88,14.212,36.756,14.279,36.641	C14.279,36.642,14.279,36.642,14.279,36.641z">
+                                    </path>
+                                    <path fill="#1de9b6"
+                                        d="M14.262,39.569c-0.453-0.792-0.481-1.74-0.134-2.569H4.762l14.319-24.331l4.653,7.907l2.321-3.943	l-4.358-7.404c-0.551-0.937-1.528-1.496-2.615-1.497c0,0,0,0-0.001,0c-1.086,0-2.064,0.559-2.616,1.496L0.458,36.425	c-0.551,0.936-0.559,2.103-0.02,3.046S1.988,41,3.074,41h13.438C15.58,40.908,14.732,40.392,14.262,39.569z M2.182,37.44h0.01H2.182	z">
+                                    </path>
+                                    <path fill="#00bfa5"
+                                        d="M47.65,36.641L33.478,12.562c-0.53-0.9-1.469-1.437-2.513-1.437c-1.044,0-1.984,0.537-2.514,1.437	l-2.396,4.071l2.321,3.943l2.589-4.398L43,37h-5c0.258,0.802,0.151,1.724-0.276,2.471C37.185,40.414,36.086,41,35,41l0,0	c0.001,0.013-0.001-0.013,0,0h10c1.043,0,2.149-0.525,2.667-1.431C48.186,38.664,48.179,37.542,47.65,36.641z">
+                                    </path>
+                                    <path fill="#00838f"
+                                        d="M38,37c-0.068-0.21-0.182-0.381-0.296-0.575l-9.328-15.849l-2.321-3.943l-2.321,3.943l-9.455,16.065	c0,0,0,0.001,0,0.001c-0.067,0.113-0.101,0.238-0.151,0.358c-0.347,0.829-0.32,1.778,0.134,2.569c0.47,0.822,1.318,1.338,2.25,1.431	h18.576c1.086,0,2.096-0.586,2.635-1.529C38.151,38.724,38.258,37.802,38,37z M26.055,24.519L33.401,37H18.71L26.055,24.519z">
+                                    </path>
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    NuxtJs
+                                </p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="education">
-                        <p class="text-2xl">Education</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam provident ipsam inventore
-                            earum adipisci hic exercitationem doloribus minima harum obcaecati consequatur modi atque
-                            repellat repudiandae accusamus, molestias sed illo aspernatur?</p>
+                </div>
+                <div class="">
+                    <div
+                        class="relative m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none bg-clip-border border-white/10">
+                        <p class="block font-sans text-2xl font-normal leading-normal text-white pb-2">
+                            Designer
+                        </p>
+                        <hr>
+                        <p class="text-white py-2">UI/UX, Web, Apps, Logos</p>
+                    </div>
+                    <div class="p-0">
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 48 48">
+                                    <linearGradient id="N8aMJ-jZ4-cfldZrsnvhda_iWw83PVcBpLw_gr1" x1="38.263" x2="10.15"
+                                        y1="1373.62" y2="1342.615" gradientTransform="translate(0 -1333.89)"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#823af3"></stop>
+                                        <stop offset=".36" stop-color="#4b66e1"></stop>
+                                        <stop offset=".906" stop-color="#01f1c4"></stop>
+                                    </linearGradient>
+                                    <path fill="url(#N8aMJ-jZ4-cfldZrsnvhda_iWw83PVcBpLw_gr1)" fill-rule="evenodd"
+                                        d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24	S12.955,4,24,4S44,12.955,44,24z"
+                                        clip-rule="evenodd"></path>
+                                    <path fill="#fff" fill-rule="evenodd"
+                                        d="M29.194,26.962c-0.835,0.915-2.007,1.378-2.556,1.378	c-0.635,0-0.982-0.389-1.053-0.974c-0.024-0.224-0.016-0.45,0.024-0.673c0.21-1.31,0.692-2.124,0.662-2.372	c-0.009-0.071-0.049-0.106-0.101-0.106c-0.406,0-1.83,1.47-2.046,2.443l-0.168,0.779c-0.11,0.549-0.648,0.902-1.018,0.902	c-0.177,0-0.311-0.088-0.334-0.283c-0.007-0.089,0-0.178,0.021-0.266l0.079-0.41c-0.768,0.574-1.596,0.962-1.984,0.962	c-0.53,0-0.827-0.283-0.933-0.709c-0.35,0.461-0.813,0.709-1.306,0.709c-0.63,0-1.237-0.417-1.528-1.034	c-0.415,0.466-0.907,0.922-1.496,1.299c-0.869,0.55-1.836,0.992-2.982,0.992c-1.058,0-1.956-0.566-2.453-1.026	c-0.737-0.69-1.126-1.718-1.241-2.656c-0.362-2.957,1.438-6.834,4.227-8.533c0.64-0.39,1.357-0.584,2.008-0.584	c1.34,0,2.34,0.958,2.48,2.104c0.126,1.032-0.286,1.924-1.431,2.501c-0.584,0.296-0.874,0.282-0.965,0.141	c-0.061-0.094-0.026-0.254,0.091-0.351c1.076-0.899,1.096-1.637,0.97-2.677c-0.082-0.669-0.522-1.098-1.016-1.098	c-2.115,0-5.149,4.745-4.727,8.197c0.165,1.346,0.99,2.904,2.682,2.904c0.564,0,1.162-0.159,1.694-0.425	c0.928-0.474,1.453-0.85,1.98-1.464c-0.13-1.596,1.24-3.6,3.278-3.6c0.882,0,1.612,0.354,1.698,1.062	c0.108,0.885-0.646,1.062-0.928,1.062c-0.247,0-0.643-0.071-0.671-0.301c-0.03-0.248,0.534-0.106,0.464-0.673	c-0.043-0.354-0.411-0.478-0.763-0.478c-1.269,0-1.97,1.77-1.835,2.869c0.061,0.496,0.315,0.991,0.774,0.991	c0.37,0,0.904-0.531,1.109-1.31c0.13-0.531,0.632-0.885,1.003-0.885c0.194,0,0.328,0.088,0.352,0.283	c0.008,0.071,0.002,0.16-0.021,0.266c-0.042,0.23-0.219,0.996-0.21,1.154c0.006,0.138,0.086,0.328,0.326,0.328	c0.19,0,0.89-0.378,1.538-0.958c0.203-1.051,0.454-2.351,0.474-2.454c0.079-0.426,0.232-0.865,1.096-0.865	c0.177,0,0.311,0.088,0.337,0.301c0.008,0.07,0.002,0.16-0.021,0.266l-0.242,1.093c0.758-1.01,1.936-1.752,2.642-1.752	c0.3,0,0.531,0.158,0.57,0.478c0.022,0.178-0.03,0.478-0.147,0.814c-0.251,0.69-0.533,1.727-0.72,2.62	c-0.04,0.19,0.026,0.476,0.373,0.476c0.277,0,1.166-0.339,1.885-1.288c-0.005-0.134-0.007-0.27-0.007-0.408	c0-0.744,0.053-1.346,0.194-1.787c0.141-0.461,0.723-0.902,1.11-0.902c0.194,0,0.335,0.106,0.335,0.318	c0,0.071-0.018,0.16-0.053,0.248c-0.264,0.779-0.405,1.506-0.405,2.231c0,0.407,0.088,1.062,0.177,1.398	c0.018,0.071,0.034,0.142,0.105,0.142c0.123,0,0.952-0.814,1.551-1.806c-0.53-0.337-0.829-0.956-0.829-1.718	c0-1.274,0.758-1.93,1.498-1.93c0.582,0,1.11,0.425,1.11,1.274c0,0.532-0.212,1.134-0.51,1.718c0,0,0.123,0.018,0.176,0.018	c0.458,0,0.811-0.213,1.006-0.443c0.088-0.1,0.17-0.178,0.248-0.224c0.59-0.713,1.455-1.228,2.47-1.228	c0.864,0,1.61,0.337,1.696,1.045c0.11,0.902-0.661,1.08-0.926,1.08c-0.264,0-0.661-0.071-0.689-0.301s0.551-0.106,0.484-0.654	c-0.043-0.354-0.413-0.496-0.766-0.496c-1.182,0-1.994,1.576-1.838,2.85c0.062,0.514,0.299,1.01,0.758,1.01	c0.37,0,0.923-0.532,1.127-1.31c0.131-0.514,0.632-0.885,1.002-0.885c0.176,0,0.328,0.088,0.354,0.301	c0.013,0.106-0.03,0.337-0.227,1.168c-0.081,0.354-0.097,0.655-0.066,0.903c0.063,0.514,0.298,0.85,0.516,1.045	c0.079,0.07,0.126,0.158,0.132,0.213c0.017,0.142-0.091,0.266-0.267,0.266c-0.053,0-0.123,0-0.181-0.035	c-0.908-0.372-1.285-0.991-1.391-1.576c-0.35,0.442-0.814,0.69-1.29,0.69c-0.811,0-1.603-0.709-1.715-1.629	c-0.046-0.378-0.001-0.785,0.123-1.184c-0.329,0.203-0.683,0.316-1.001,0.316c-0.106,0-0.194,0-0.299-0.018	c-0.793,1.15-1.622,1.947-2.257,2.302c-0.264,0.142-0.51,0.213-0.687,0.213c-0.142,0-0.3-0.035-0.37-0.159	C29.367,27.91,29.258,27.474,29.194,26.962L29.194,26.962z M32.067,23.191c0,0.496,0.246,1.01,0.564,1.346	c0.124-0.337,0.194-0.673,0.194-1.01c0-0.638-0.247-0.921-0.441-0.921C32.155,22.606,32.067,22.926,32.067,23.191z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    Canva
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 48 48">
+                                    <path fill="#e64a19" d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z">
+                                    </path>
+                                    <path fill="#7c4dff" d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z">
+                                    </path>
+                                    <path fill="#66bb6a"
+                                        d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z">
+                                    </path>
+                                    <path fill="#ff7043"
+                                        d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z">
+                                    </path>
+                                    <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    Figma
+                                </p>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50px"
+                                    baseProfile="basic">
+                                    <path fill="#f9dbd2"
+                                        d="M50,12c-20.987,0-38,17.013-38,38s17.013,38,38,38s38-17.013,38-38S70.987,12,50,12z" />
+                                    <path fill="#f1bc19"
+                                        d="M78,13c-0.552,0-1,0.448-1,1s0.448,1,1,1s1-0.448,1-1S78.552,13,78,13z" />
+                                    <path fill="#f1bc19"
+                                        d="M84,12c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4S86.209,12,84,12z" />
+                                    <path fill="#f1bc19"
+                                        d="M86,30c-0.552,0-1,0.448-1,1s0.448,1,1,1s1-0.448,1-1S86.552,30,86,30z" />
+                                    <path fill="#ee3e54"
+                                        d="M14,24c-1.105,0-2,0.895-2,2s0.895,2,2,2s2-0.895,2-2S15.105,24,14,24z" />
+                                    <path fill="#fbcd59"
+                                        d="M78,75c-1.105,0-2,0.895-2,2s0.895,2,2,2s2-0.895,2-2S79.105,75,78,75z M17,74 c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4S19.209,74,17,74z" />
+                                    <path fill="#ee3e54"
+                                        d="M24,81c-1.105,0-2,0.895-2,2s0.895,2,2,2s2-0.895,2-2S25.105,81,24,81z" />
+                                    <path fill="#fff"
+                                        d="M66.483,76.034c-1.371,0-2.483,1.112-2.483,2.483S65.112,81,66.483,81s2.483-1.112,2.483-2.483 S67.854,76.034,66.483,76.034z M16,47c-0.552,0-1,0.448-1,1s0.448,1,1,1c0.552,0,1-0.448,1-1S16.552,47,16,47z" />
+                                    <path fill="#fff"
+                                        d="M80,64c-1.105,0-2,0.895-2,2s0.895,2,2,2s2-0.895,2-2S81.105,64,80,64z" />
+                                    <path fill="#f96c55"
+                                        d="M66.833,71.5H33.417c-2.647,0-4.792-2.145-4.792-4.792V33.292c0-2.647,2.145-4.792,4.792-4.792 h33.417c2.646,0,4.791,2.145,4.791,4.792v33.417C71.625,69.355,69.48,71.5,66.833,71.5z" />
+                                    <path fill="#dd583a"
+                                        d="M50.375,33.625l21.654,20.538l0.096,13.25c0.016,2.184-1.782,3.962-4.005,3.962H51.126 C51.126,71.375,50.375,33.133,50.375,33.625z" />
+                                    <polygon fill="#f9dac0"
+                                        points="59.125,59 59.125,72 41.125,72 41.125,59 50.125,34" />
+                                    <path fill="#f59172"
+                                        d="M53.125,61v11h-6V61c0-2.76,1.34-5,3-5S53.125,58.24,53.125,61z" />
+                                    <path fill="#f8ab97"
+                                        d="M47.125,61v11h-6V61c0-2.76,1.34-5,3-5S47.125,58.24,47.125,61z" />
+                                    <path fill="#848484" d="M53.375,43c0,0-3.062-8.812-3.25-9l3.148,9H53.375z" />
+                                    <polygon fill="#96755f" points="58.125,56.875 53.273,43 51.163,43 53.125,60" />
+                                    <polygon fill="#605e60" points="50,33.75 51.163,43 53.273,43" />
+                                    <path fill="#5a5c70"
+                                        d="M59.125,61v11h-6V61c0-2.76,1.34-5,3-5S59.125,58.24,59.125,61z" />
+                                    <polygon fill="#848484" points="47.125,43 51.163,43 50.125,34" />
+                                    <path fill="#472b29"
+                                        d="M66.25,28.9c2.743,0,4.975,2.232,4.975,4.975v32.25c0,2.743-2.232,4.975-4.975,4.975H34 c-2.743,0-4.975-2.232-4.975-4.975v-32.25c0-2.743,2.232-4.975,4.975-4.975H66.25 M66.25,27.5H34c-3.521,0-6.375,2.854-6.375,6.375 v32.25c0,3.521,2.854,6.375,6.375,6.375h32.25c3.521,0,6.375-2.854,6.375-6.375v-32.25C72.625,30.354,69.771,27.5,66.25,27.5 L66.25,27.5z" />
+                                    <path fill="#472b29"
+                                        d="M52.549,55.125c-0.125,0-0.232-0.093-0.248-0.22l-0.636-5.25c-0.017-0.138,0.081-0.262,0.218-0.278 c0.148-0.02,0.262,0.08,0.278,0.218l0.636,5.25c0.017,0.138-0.081,0.262-0.218,0.278C52.568,55.124,52.559,55.125,52.549,55.125z" />
+                                    <path fill="#472b29"
+                                        d="M51.579,47.125c-0.125,0-0.233-0.094-0.248-0.221l-0.146-1.25c-0.017-0.138,0.082-0.262,0.219-0.277 c0.13-0.009,0.262,0.082,0.277,0.219l0.146,1.25c0.017,0.138-0.082,0.262-0.219,0.277C51.599,47.124,51.589,47.125,51.579,47.125z" />
+                                    <path fill="#472b29"
+                                        d="M51.286,44.625c-0.125,0-0.233-0.094-0.248-0.221l-0.161-1.375 c-0.017-0.138,0.082-0.262,0.219-0.277c0.134-0.012,0.262,0.082,0.277,0.219l0.161,1.375c0.017,0.138-0.082,0.262-0.219,0.277 C51.306,44.624,51.296,44.625,51.286,44.625z" />
+                                    <path fill="#472b29"
+                                        d="M51.125,43.5c-0.125,0-0.232-0.093-0.248-0.22l-1-8.25c-0.017-0.138,0.081-0.262,0.218-0.278 c0.145-0.017,0.262,0.081,0.278,0.218l1,8.25c0.017,0.138-0.081,0.262-0.218,0.278C51.145,43.499,51.135,43.5,51.125,43.5z" />
+                                    <path fill="#472b29"
+                                        d="M59.125,72.5h-18c-0.276,0-0.5-0.224-0.5-0.5V60.396c0-0.983,0.169-1.952,0.502-2.879l8.527-23.687 c0.143-0.398,0.799-0.398,0.941,0l8.527,23.687c0.333,0.927,0.502,1.896,0.502,2.879V72C59.625,72.276,59.401,72.5,59.125,72.5z M41.625,71.5h17V60.396c0-0.868-0.149-1.723-0.443-2.541l-8.057-22.379l-8.057,22.379c-0.294,0.818-0.443,1.673-0.443,2.541V71.5 z" />
+                                    <path fill="#472b29"
+                                        d="M53.25,43.25h-6.125c-0.138,0-0.25-0.112-0.25-0.25s0.112-0.25,0.25-0.25h6.125 c0.138,0,0.25,0.112,0.25,0.25S53.388,43.25,53.25,43.25z" />
+                                    <path fill="#472b29"
+                                        d="M59.375,72.25h-18.5V61c0-2.895,1.458-5.25,3.25-5.25c1.35,0,2.509,1.335,3,3.23 c0.491-1.896,1.65-3.23,3-3.23s2.509,1.335,3,3.23c0.491-1.896,1.65-3.23,3-3.23c1.792,0,3.25,2.355,3.25,5.25V72.25z M41.375,71.75h17.5V61c0-2.619-1.233-4.75-2.75-4.75s-2.75,2.131-2.75,4.75h-0.5c0-2.619-1.233-4.75-2.75-4.75 s-2.75,2.131-2.75,4.75h-0.5c0-2.619-1.233-4.75-2.75-4.75s-2.75,2.131-2.75,4.75V71.75z" />
+                                    <path fill="#472b29"
+                                        d="M47.125,71.875c-0.138,0-0.25-0.112-0.25-0.25V61c0-0.138,0.112-0.25,0.25-0.25 s0.25,0.112,0.25,0.25v10.625C47.375,71.763,47.263,71.875,47.125,71.875z" />
+                                    <path fill="#472b29"
+                                        d="M53.125,71.875c-0.138,0-0.25-0.112-0.25-0.25V67.25c0-0.138,0.112-0.25,0.25-0.25 s0.25,0.112,0.25,0.25v4.375C53.375,71.763,53.263,71.875,53.125,71.875z" />
+                                    <path fill="#472b29"
+                                        d="M53.125,65.125c-0.138,0-0.25-0.112-0.25-0.25V61c0-0.138,0.112-0.25,0.25-0.25 s0.25,0.112,0.25,0.25v3.875C53.375,65.013,53.263,65.125,53.125,65.125z" />
+                                </svg>
+                                <p
+                                    class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
+                                    Skecthbook
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
             class="transition duration-300 ease-in-out delay-150">
             <path
-                d="M 0,400 L 0,150 C 59.51769806233314,150.4873641914933 119.03539612466628,150.9747283829866 165,145 C 210.96460387533372,139.0252716170134 243.37611356366807,126.58845065954692 283,119 C 322.62388643633193,111.41154934045308 369.4601496206614,108.67146897882577 425,102 C 480.5398503793386,95.32853102117423 544.7832879536863,84.72567342515003 599,86 C 653.2167120463137,87.27432657484997 697.4066985645933,100.42583732057416 735,101 C 772.5933014354067,101.57416267942584 803.5899177879406,89.57097729255332 845,116 C 886.4100822120594,142.42902270744668 938.233630283645,207.29025350921253 989,193 C 1039.766369716355,178.70974649078747 1089.4755610774803,85.26800867059661 1141,82 C 1192.5244389225197,78.73199132940339 1245.8641254064344,165.63771180840098 1296,192 C 1346.1358745935656,218.36228819159902 1393.067937296783,184.1811440957995 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none" stroke-width="0" fill="#7fbadc" fill-opacity="1"
+                d="M 0,600 L 0,150 C 97.57142857142858,185.07142857142856 195.14285714285717,220.14285714285714 309,205 C 422.85714285714283,189.85714285714286 553.0000000000001,124.5 701,122 C 848.9999999999999,119.5 1014.8571428571427,179.85714285714286 1141,195 C 1267.1428571428573,210.14285714285714 1353.5714285714287,180.07142857142856 1440,150 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#046997" fill-opacity="0.53"
                 class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-        </svg>
-    </div>
-    <!-- MySkills -->
-    <div id="skills" class="pt-32">
-        <p class="text-4xl font-bold text-center">
-            My Skills
-        </p>
-        <div class="flex justify-center gap-20 pt-10">
-            <div class="hardskils text-center">
-                <p class="text-2xl">HardSkills</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, unde reiciendis. Commodi est
-                    unde quod recusandae ratione, sequi veritatis aliquam, eum, molestias earum voluptates accusamus
-                    quibusdam dolorum ab repellendus delectus?</p>
-            </div>
-            <div class="softskills text-center">
-                <p class="text-2xl">SoftSkills</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum perspiciatis facere quibusdam
-                    pariatur aliquid, rem eaque atque, earum quidem provident placeat nobis reiciendis fuga fugiat
-                    tempora? Excepturi, officia quidem. Dicta?</p>
-            </div>
-        </div>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
-            class="transition duration-300 ease-in-out delay-150">
             <path
-                d="M 0,400 L 0,150 C 59.51769806233314,150.4873641914933 119.03539612466628,150.9747283829866 165,145 C 210.96460387533372,139.0252716170134 243.37611356366807,126.58845065954692 283,119 C 322.62388643633193,111.41154934045308 369.4601496206614,108.67146897882577 425,102 C 480.5398503793386,95.32853102117423 544.7832879536863,84.72567342515003 599,86 C 653.2167120463137,87.27432657484997 697.4066985645933,100.42583732057416 735,101 C 772.5933014354067,101.57416267942584 803.5899177879406,89.57097729255332 845,116 C 886.4100822120594,142.42902270744668 938.233630283645,207.29025350921253 989,193 C 1039.766369716355,178.70974649078747 1089.4755610774803,85.26800867059661 1141,82 C 1192.5244389225197,78.73199132940339 1245.8641254064344,165.63771180840098 1296,192 C 1346.1358745935656,218.36228819159902 1393.067937296783,184.1811440957995 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none" stroke-width="0" fill="#54a5d5" fill-opacity="1"
-                class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+                d="M 0,600 L 0,350 C 95.85714285714289,319.5 191.71428571428578,289 311,306 C 430.2857142857142,323 572.9999999999998,387.5 717,386 C 861.0000000000002,384.5 1006.2857142857144,317 1127,300 C 1247.7142857142856,283 1343.8571428571427,316.5 1440,350 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#046997" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
         </svg>
     </div>
     <!-- MyProject -->
-    <div id="project" class="pt-32">
+    <div id="project" class="" style="padding-top: 90px;">
         <p class="text-4xl text-center font-bold">My Projects</p>
-        <div class="card text-center">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illo voluptate aliquam porro ipsa? Iusto,
-                assumenda! Praesentium, fugiat! Accusamus magnam obcaecati eos eius placeat? Et assumenda corporis
-                voluptatibus earum iure!
-                Perspiciatis inventore pariatur cupiditate nobis dolorem incidunt fuga expedita aut, dolorum aliquam,
-                accusamus qui tempora quis voluptatum. Suscipit neque voluptatem repudiandae minima aliquid dignissimos,
-                cumque minus blanditiis iste beatae hic!
-                Eum dolor fugit, nam eos possimus repudiandae voluptatum dicta vitae hic, velit quasi quaerat quisquam
-                accusamus! Ut possimus velit magni laborum, commodi ducimus exercitationem provident, dolores modi
-                laudantium, dignissimos perspiciatis.</p>
+        <div class="flex flex-wrap content-center justify-center lg:gap-20 gap-10 pt-10 mx-10">
+            <div
+                class="relative flex flex-col text-gray-700 bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md bg-clip-border rounded-xl lg:w-96 sm:w-64 w-62">
+                <div
+                    class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl">
+                    <img src="assets/img/perpus.png" alt="project-picture" />
+                </div>
+                <div class="p-6 text-center flex justify-center items-center content-center gap-2">
+                    <h4
+                        class="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        Perpus Digital |
+                    </h4>
+                    <a href="http://digital-library-blond.vercel.app">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 pb-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="relative flex flex-col text-gray-700 bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md bg-clip-border rounded-xl lg:w-96 md:w-72 sm:w-64 w-62">
+                <div
+                    class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl">
+                    <img src="assets/img/zyeeilish.png" alt="project-picture" />
+                </div>
+                <div class="p-6 text-center flex justify-center items-center content-center gap-2">
+                    <h4
+                        class="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        Zyeeilish |
+                    </h4>
+                    <a href="http://zyeeilish.vercel.app">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 pb-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
             class="transition duration-300 ease-in-out delay-150">
             <path
-                d="M 0,400 L 0,150 C 59.51769806233314,150.4873641914933 119.03539612466628,150.9747283829866 165,145 C 210.96460387533372,139.0252716170134 243.37611356366807,126.58845065954692 283,119 C 322.62388643633193,111.41154934045308 369.4601496206614,108.67146897882577 425,102 C 480.5398503793386,95.32853102117423 544.7832879536863,84.72567342515003 599,86 C 653.2167120463137,87.27432657484997 697.4066985645933,100.42583732057416 735,101 C 772.5933014354067,101.57416267942584 803.5899177879406,89.57097729255332 845,116 C 886.4100822120594,142.42902270744668 938.233630283645,207.29025350921253 989,193 C 1039.766369716355,178.70974649078747 1089.4755610774803,85.26800867059661 1141,82 C 1192.5244389225197,78.73199132940339 1245.8641254064344,165.63771180840098 1296,192 C 1346.1358745935656,218.36228819159902 1393.067937296783,184.1811440957995 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none" stroke-width="0" fill="#3892c6" fill-opacity="1"
+                d="M 0,600 L 0,150 C 97.57142857142858,185.07142857142856 195.14285714285717,220.14285714285714 309,205 C 422.85714285714283,189.85714285714286 553.0000000000001,124.5 701,122 C 848.9999999999999,119.5 1014.8571428571427,179.85714285714286 1141,195 C 1267.1428571428573,210.14285714285714 1353.5714285714287,180.07142857142856 1440,150 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#003b61" fill-opacity="0.53"
                 class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <path
+                d="M 0,600 L 0,350 C 95.85714285714289,319.5 191.71428571428578,289 311,306 C 430.2857142857142,323 572.9999999999998,387.5 717,386 C 861.0000000000002,384.5 1006.2857142857144,317 1127,300 C 1247.7142857142856,283 1343.8571428571427,316.5 1440,350 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="#003b61" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
         </svg>
     </div>
-    <div id="contact" class="pt-32">
+    <!-- ContactPerson -->
+    <div id="contact" class="">
         <p class="text-4xl text-center font-bold">
             Contact Person
         </p>
-        <div class="flex gap-10 text-center">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem doloremque, ipsum unde expedita odio
-                assumenda dolorum dicta adipisci earum inventore quisquam eaque architecto dolor, exercitationem rem
-                sapiente minima eveniet velit.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum autem deleniti distinctio, perferendis,
-                quos atque laudantium eum optio harum ipsa corporis fuga unde explicabo, ex ipsum? Ea ipsa optio
-                voluptatibus!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus non, architecto sit nemo illo odio
-                nihil omnis dolorum sunt earum eum vel, magni ipsum? Saepe vel ullam ea corporis ab.</p>
+        <div class="flex flex-wrap gap-10 justify-center pt-10">
+            <a href="http://github.com/reezyee">
+                <button type="button"
+                    class="h-10 text-white bg-black hover:bg-gray-900 focus:ring-4 gap-2 focus:outline-none focus:ring-gray-500 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-slate-900">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Github
+                </button>
+            </a>
+            <a href="http://instagram.com/reezyee">
+                <button type="button"
+                    class="h-10 text-white bg-gradient-to-tr from-red-600 to-blue-600 via-pink-600 hover:bg-gradient-to-tr hover:from-red-800 hover:to-blue-800 hover:via-pink-800 focus:ring-4 gap-2 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-red-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 50 50" stroke="white"
+                        stroke-width="3">
+                        <path
+                            d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                        </path>
+                    </svg>
+                    Instagram
+                </button>
+            </a>
+            <a href="mailto:rezasapitra514@gmail.com">
+                <button type="button"
+                    class="h-10 text-white bg-red-700 hover:bg-red-600 focus:ring-4 gap-2 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-red-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 50 50" stroke="white"
+                        stroke-width="1.7">
+                        <path
+                            d="M 5.5 7 C 3.03125 7 1.011719 9.015625 1 11.484375 C 1 11.484375 1 11.488281 1 11.492188 C 1 11.496094 1 11.496094 1 11.5 L 1 38.5 C 1 40.972656 3.027344 43 5.5 43 L 44.5 43 C 46.972656 43 49 40.972656 49 38.5 L 49 11.5 C 49 11.496094 49 11.496094 49 11.492188 C 49 11.488281 49 11.484375 49 11.484375 C 48.988281 9.015625 46.96875 7 44.5 7 Z M 8.101563 9 L 41.902344 9 L 25 20.78125 Z M 4.773438 9.117188 L 25 23.21875 L 45.230469 9.117188 C 46.253906 9.425781 46.992188 10.355469 47 11.488281 C 46.996094 11.699219 46.78125 12.121094 46.46875 12.460938 C 46.152344 12.804688 45.84375 13.019531 45.84375 13.019531 L 45.839844 13.027344 L 25 27.777344 L 4.160156 13.027344 L 4.15625 13.019531 C 4.15625 13.019531 3.847656 12.804688 3.53125 12.460938 C 3.21875 12.121094 3.003906 11.699219 3 11.488281 C 3.007813 10.355469 3.746094 9.425781 4.773438 9.117188 Z M 3 14.652344 C 3 14.652344 3.007813 14.660156 3.007813 14.660156 L 3.015625 14.664063 L 3.015625 14.667969 L 6 16.777344 L 6 41 L 5.5 41 C 4.109375 41 3 39.890625 3 38.5 Z M 47 14.652344 L 47 38.5 C 47 39.890625 45.890625 41 44.5 41 L 44 41 L 44 16.777344 L 46.984375 14.667969 L 46.984375 14.664063 C 46.984375 14.664063 47 14.652344 47 14.652344 Z M 8 18.191406 L 25 30.222656 L 42 18.191406 L 42 41 L 8 41 Z">
+                        </path>
+                    </svg>
+                    Gmail
+                </button>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6285797777340">
+                <button type="button"
+                    class="h-10 text-white bg-green-700 hover:bg-green-600 focus:ring-4 gap-2 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-red-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 50 50" stroke="white"
+                        stroke-width="2.4">
+                        <path
+                            d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 29.079097 3.1186875 32.88588 4.984375 36.208984 L 2.0371094 46.730469 A 1.0001 1.0001 0 0 0 3.2402344 47.970703 L 14.210938 45.251953 C 17.434629 46.972929 21.092591 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 21.278025 46 17.792121 45.029635 14.761719 43.333984 A 1.0001 1.0001 0 0 0 14.033203 43.236328 L 4.4257812 45.617188 L 7.0019531 36.425781 A 1.0001 1.0001 0 0 0 6.9023438 35.646484 C 5.0606869 32.523592 4 28.890107 4 25 C 4 13.390466 13.390466 4 25 4 z M 16.642578 13 C 16.001539 13 15.086045 13.23849 14.333984 14.048828 C 13.882268 14.535548 12 16.369511 12 19.59375 C 12 22.955271 14.331391 25.855848 14.613281 26.228516 L 14.615234 26.228516 L 14.615234 26.230469 C 14.588494 26.195329 14.973031 26.752191 15.486328 27.419922 C 15.999626 28.087653 16.717405 28.96464 17.619141 29.914062 C 19.422612 31.812909 21.958282 34.007419 25.105469 35.349609 C 26.554789 35.966779 27.698179 36.339417 28.564453 36.611328 C 30.169845 37.115426 31.632073 37.038799 32.730469 36.876953 C 33.55263 36.755876 34.456878 36.361114 35.351562 35.794922 C 36.246248 35.22873 37.12309 34.524722 37.509766 33.455078 C 37.786772 32.688244 37.927591 31.979598 37.978516 31.396484 C 38.003976 31.104927 38.007211 30.847602 37.988281 30.609375 C 37.969311 30.371148 37.989581 30.188664 37.767578 29.824219 C 37.302009 29.059804 36.774753 29.039853 36.224609 28.767578 C 35.918939 28.616297 35.048661 28.191329 34.175781 27.775391 C 33.303883 27.35992 32.54892 26.991953 32.083984 26.826172 C 31.790239 26.720488 31.431556 26.568352 30.914062 26.626953 C 30.396569 26.685553 29.88546 27.058933 29.587891 27.5 C 29.305837 27.918069 28.170387 29.258349 27.824219 29.652344 C 27.819619 29.649544 27.849659 29.663383 27.712891 29.595703 C 27.284761 29.383815 26.761157 29.203652 25.986328 28.794922 C 25.2115 28.386192 24.242255 27.782635 23.181641 26.847656 L 23.181641 26.845703 C 21.603029 25.455949 20.497272 23.711106 20.148438 23.125 C 20.171937 23.09704 20.145643 23.130901 20.195312 23.082031 L 20.197266 23.080078 C 20.553781 22.728924 20.869739 22.309521 21.136719 22.001953 C 21.515257 21.565866 21.68231 21.181437 21.863281 20.822266 C 22.223954 20.10644 22.02313 19.318742 21.814453 18.904297 L 21.814453 18.902344 C 21.828863 18.931014 21.701572 18.650157 21.564453 18.326172 C 21.426943 18.001263 21.251663 17.580039 21.064453 17.130859 C 20.690033 16.232501 20.272027 15.224912 20.023438 14.634766 L 20.023438 14.632812 C 19.730591 13.937684 19.334395 13.436908 18.816406 13.195312 C 18.298417 12.953717 17.840778 13.022402 17.822266 13.021484 L 17.820312 13.021484 C 17.450668 13.004432 17.045038 13 16.642578 13 z M 16.642578 15 C 17.028118 15 17.408214 15.004701 17.726562 15.019531 C 18.054056 15.035851 18.033687 15.037192 17.970703 15.007812 C 17.906713 14.977972 17.993533 14.968282 18.179688 15.410156 C 18.423098 15.98801 18.84317 16.999249 19.21875 17.900391 C 19.40654 18.350961 19.582292 18.773816 19.722656 19.105469 C 19.863021 19.437122 19.939077 19.622295 20.027344 19.798828 L 20.027344 19.800781 L 20.029297 19.802734 C 20.115837 19.973483 20.108185 19.864164 20.078125 19.923828 C 19.867096 20.342656 19.838461 20.445493 19.625 20.691406 C 19.29998 21.065838 18.968453 21.483404 18.792969 21.65625 C 18.639439 21.80707 18.36242 22.042032 18.189453 22.501953 C 18.016221 22.962578 18.097073 23.59457 18.375 24.066406 C 18.745032 24.6946 19.964406 26.679307 21.859375 28.347656 C 23.05276 29.399678 24.164563 30.095933 25.052734 30.564453 C 25.940906 31.032973 26.664301 31.306607 26.826172 31.386719 C 27.210549 31.576953 27.630655 31.72467 28.119141 31.666016 C 28.607627 31.607366 29.02878 31.310979 29.296875 31.007812 L 29.298828 31.005859 C 29.655629 30.601347 30.715848 29.390728 31.224609 28.644531 C 31.246169 28.652131 31.239109 28.646231 31.408203 28.707031 L 31.408203 28.708984 L 31.410156 28.708984 C 31.487356 28.736474 32.454286 29.169267 33.316406 29.580078 C 34.178526 29.990889 35.053561 30.417875 35.337891 30.558594 C 35.748225 30.761674 35.942113 30.893881 35.992188 30.894531 C 35.995572 30.982516 35.998992 31.07786 35.986328 31.222656 C 35.951258 31.624292 35.8439 32.180225 35.628906 32.775391 C 35.523582 33.066746 34.975018 33.667661 34.283203 34.105469 C 33.591388 34.543277 32.749338 34.852514 32.4375 34.898438 C 31.499896 35.036591 30.386672 35.087027 29.164062 34.703125 C 28.316336 34.437036 27.259305 34.092596 25.890625 33.509766 C 23.114812 32.325956 20.755591 30.311513 19.070312 28.537109 C 18.227674 27.649908 17.552562 26.824019 17.072266 26.199219 C 16.592866 25.575584 16.383528 25.251054 16.208984 25.021484 L 16.207031 25.019531 C 15.897202 24.609805 14 21.970851 14 19.59375 C 14 17.077989 15.168497 16.091436 15.800781 15.410156 C 16.132721 15.052495 16.495617 15 16.642578 15 z">
+                        </path>
+                    </svg>
+                    Whatsapp
+                </button>
+            </a>
         </div>
         <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
             class="transition duration-300 ease-in-out delay-150">
             <path
-                d="M 0,400 L 0,150 C 95.72820512820513,175.0897435897436 191.45641025641027,200.17948717948715 273,188 C 354.54358974358973,175.82051282051285 421.90256410256404,126.37179487179486 484,113 C 546.097435897436,99.62820512820514 602.9333333333333,122.33333333333331 695,137 C 787.0666666666667,151.66666666666669 914.3641025641025,158.29487179487182 990,170 C 1065.6358974358975,181.70512820512818 1089.6102564102564,198.48717948717947 1156,196 C 1222.3897435897436,193.51282051282053 1331.1948717948717,171.75641025641028 1440,150 L 1440,400 L 0,400 Z"
-                stroke="none" stroke-width="0" fill="#1f7bb0" fill-opacity="1"
+                d="M 0,400 L 0,100 C 97.25,70.35714285714286 194.5,40.71428571428571 307,54 C 419.5,67.28571428571429 547.2499999999999,123.5 680,127 C 812.7500000000001,130.5 950.5,81.28571428571428 1078,68 C 1205.5,54.714285714285715 1322.75,77.35714285714286 1440,100 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#002339" fill-opacity="0.53"
                 class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            <path
+                d="M 0,400 L 0,233 C 137.42857142857142,232.25 274.85714285714283,231.5 378,232 C 481.14285714285717,232.5 550.0000000000001,234.25 665,244 C 779.9999999999999,253.75 941.1428571428571,271.5 1078,271 C 1214.857142857143,270.5 1327.4285714285716,251.75 1440,233 L 1440,400 L 0,400 Z"
+                stroke="none" stroke-width="0" fill="#002339" fill-opacity="1"
+                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
         </svg>
     </div>
 </body>
+
 </html>
