@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo.svg">
+    <title>Reezyee</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<style>
+    body {
+        color: white;
+        background: #153378;
+        cursor: none;
+    }
+</style>
+
+<body>
+    <div class="cursor"></div>
+
+    <section>
+        <!-- <div class="container">
+            <div class="pre-loader">
+                <div class="loader"></div>
+                <div class="loader-bg"></div>
+            </div>
+            <div class="loader-content">
+                <div class="count flex font-comfortaa">
+                    <p>0</p>%
+                </div>
+            </div> -->
+        <!-- <div class="loader-2"></div> -->
+        <!-- </div> -->
+    </section>
+    <main class="site-content">
+        <section class="Hero_container">
+            <div class="Header_hero wrapper">
+                <h1 class="split-type font-unbounded text-center flex uppercase cursor-scale">
+                    Developer <span class="lg:text-3xl md:text-3xl sm:text-2xl nd"> & </span> Designer</h1>
+            </div>
+            <div class="Img_hero">
+                <img src="./assets/img/abstract.jpeg" alt="" class="img cursor-scale">
+            </div>
+            <div class="Footer_hero flex lg:justify-between lg:flex-row flex-col lg:items-start items-end gap-2">
+                <div class="footer_text">
+                    <h1 class="lg:text-3xl text-xl font-comfortaa tracking-tight cursor-scale small">I'm a developer and designer based in
+                        Indonesia. I like making fun, sketches, and dresses.</h1>
+                </div>
+                <div class="footer_button">
+                    <a href="contact.html" role="button"
+                        class="btn rounded-full lg:text-3xl text-lg text-nowrap p-3 font-comfortaa cursor-scale small">Contact
+                        Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <header class="header fixed bottom-0 flex justify-center shadow-md my-2" style="width: 100%;">
+        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm flex justify-around gap-10 cursor-scale small">
+            <img src="./assets/img/logo.svg" alt="logo" type="svg" width="50">
+            <ul class="link flex items-end justify-end content-center font-comfortaa">
+                <a href="about.html">
+                    <li class="py-4 text-white duration-200 cursor-pointer">
+                        about
+                        <span>,</span>
+                    </li>
+                </a>
+                <a href="project.html">
+                    <li class="px-2 py-4 text-white duration-200 cursor-pointer">
+                        projects
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/script.js"></script>
+    <script>
+
+
+
+        // function startLoader() {
+        //     let counterElement = document.querySelector(".count p")
+        //     let currentValue = 0
+        //     function updateCounter() {
+        //         if (currentValue < 100) {
+        //             let increment = Math.floor(Math.random() * 10) + 1;
+        //             currentValue = Math.min(currentValue + increment, 100)
+        //             counterElement.textContent = currentValue;
+
+        //             let delay = Math.floor(Math.random() * 200) + 25;
+        //             setTimeout(updateCounter, delay)
+        //         }
+        //     }
+
+        //     updateCounter();
+        // }
+
+        // startLoader();
+        // gsap.to(".count", { opacity: 0, delay: 3.5, duration: 0.5, })
+        // gsap.to(".pre-loader", {
+        //     scale: 0.5,
+        //     ease: "power4.inOut",
+        //     duration: 2,
+        //     delay: 3,
+        // })
+        // gsap.to(".loader", {
+        //     height: '0',
+        //     ease: "power4.inOut",
+        //     duration: 1.5,
+        //     delay: 3.75,
+        // })
+        // gsap.to(".loader-bg", {
+        //     height: '0',
+        //     ease: "power4.inOut",
+        //     duration: 1.5,
+        //     delay: 4,
+        // })
+
+        // gsap.to(".loader-2", {
+        //     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        //     ease: "power4.inOut",
+        //     duration: 1.5,
+        // })
+
+        gsap.from('.Hero_container', {
+            clipPath: 'polygon(29% 38%, 72% 38%, 72% 38%, 29% 38%)',
+            delay: 1,
+            duration: 2,
+            ease: 'power4.inOut'
+        })
+
+        const cp = gsap.timeline({ paused: false })
+        const button = document.querySelector(".btn")
+
+
+        button.addEventListener('mouseenter', () => {
+            // cp.to(['.footer_text','.img', '.split-type'], {
+            //     opacity: 0,
+            //     duration: 0.001
+            // })
+            cp.to(".img", {
+                clipPath: 'polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)',
+                duration: 0.5,
+                ease: 'power4.inOut'
+            })
+        })
+        button.addEventListener('mouseleave', () => {
+            // cp.to(['.footer_text','.img', '.split-type'], {
+            //     opacity: 1,
+            //     duration: 0.001
+            // })
+            cp.to(".img", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                duration: 0.5,
+            })
+        })
+
+
+
+        const links = document.querySelectorAll('.link')
+        const text1 = new SplitType('.split-type')
+
+        let tl = gsap.timeline();
+
+
+        tl
+            // .from('.header', {
+            //     duration: 1,
+            //     y: '100%',
+            //     ease: 'bounce',
+            //     delay: 1    
+            // },)
+            .from(".img", {
+                clipPath: 'polygon(82% 0, 82% 0, 19% 100%, 19% 100%)',
+                duration: 1.5,
+                ease: "power4.inOut",
+                delay: 1.8
+            })
+            .from([".char", ".nd"], {
+                y: '300%',
+                stagger: 0.05,
+                duration: 0.5
+            })
+            .from(".heading", {
+                opacity: 0,
+                duration: 1,
+                stagger: 0.05,
+            }, 5.5
+            )
+            .from(".footer_text", {
+                opacity: 0,
+                duration: 1,
+            })
+            .from(".btn", {
+                opacity: 0,
+                duration: 1
+            })
+
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+</body>
+
+</html>

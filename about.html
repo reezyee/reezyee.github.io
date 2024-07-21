@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo.svg">
+    <title>Reezyee</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+    body {
+        color: white;
+        background: #c7c1b6;
+        color: #c7c1b6;
+        cursor: none;
+    }
+</style>
+
+<body>
+    <div class="cursor"></div>
+    <section>
+        <div class="transitions"></div>
+    </section>
+    <main class="site-content-about">
+        <section class="About_container flex justify-around items-center lg:flex-row flex-col-reverse">
+            <div class="Text_about flex flex-col gap-8">
+                <div class="Header_about">
+                    <h1 class="uppercase font-unbounded Say_hi cursor-scale">hello i am Reezyee</h1>
+                    <p class="uppercase font-unbounded text-end My_name cursor-scale small">Reza Sapitra</p>
+                </div>
+                <div
+                    class="Content_about font-comfortaa lg:text-3xl text-xl cursor-scale small text-justify tracking-tight">
+                    I use my passion and skills to create minimalist, interactive bold color combinations. I focus on
+                    animated and responsive digital products and i am passionate about fashion modeling and photographer
+                    with my unique style.
+                </div>
+                <div class="experted flex gap-3 flex-wrap cursor-scale small">
+                    <div
+                        class="pss btn1 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <img src="./assets/img/expert/web.png" alt="" class="loog1 w-12 h-12">
+                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Web
+                            Developer</h5>
+                    </div>
+                    <div
+                        class="pss btn2 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <img src="./assets/img/expert/frontend.png" alt="" class="loog2 w-12 h-12">
+                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Frontend
+                            Developer</h5>
+                    </div>
+                    <div
+                        class="pss btn3 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <img src="./assets/img/expert/game.png" alt="" class="loog3 w-12 h-12">
+                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Game
+                            Developer</h5>
+                    </div>
+                    <div
+                        class="pss btn4 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <img src="./assets/img/expert/design.png" alt="" class="loog4 w-12 h-12">
+                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Designer
+                        </h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pfp rounded-t-full border-2 cursor-scale">
+                <img src="./assets/img/pfp.svg" alt="pfp" class="content-pfp">
+            </div>
+        </section>
+        <section class="Tech_container">
+            <div class="Tech">
+
+            </div>
+        </section>
+    </main>
+    <header class="header fixed bottom-0 flex justify-center shadow-md my-2" style="width: 100%;">
+        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm flex justify-around gap-10">
+            <a href="index.html">
+                <img src="./assets/img/logo.svg" alt="logo" type="svg" width="50">
+            </a>
+            <ul class="link flex items-end justify-end content-center font-comfortaa">
+                <a href="about.html">
+                    <li class="py-4 text-white duration-200 cursor-pointer">
+                        about
+                        <span>,</span>
+                    </li>
+                </a>
+                <a href="project.html">
+                    <li class="px-2 py-4 text-white duration-200 cursor-pointer">
+                        projects
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/script.js"></script>
+    <script>
+        gsap.to(".transitions", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            ease: "power4.inOut",
+            duration: 1.5,
+        })
+        gsap.from('.About_container', {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+            ease: "power4.inOut",
+            duration: 2
+        })
+
+        const cp = gsap.timeline({ paused: false })
+        const button1 = document.querySelector(".btn1")
+        const button2 = document.querySelector(".btn2")
+        const button3 = document.querySelector(".btn3")
+        const button4 = document.querySelector(".btn4")
+        
+
+        button1.addEventListener('mouseenter', () => {
+            cp.to(".loog1", {
+                rotate: 360,
+                duration: 1,
+            })})
+        button1.addEventListener('mouseleave', () => {
+            cp.to(".loog1", {
+                rotate: 0,
+                duration: 1,
+            })})
+
+        button2.addEventListener('mouseenter', () => {
+            cp.to(".loog2", {
+                rotate: 360,
+                duration: 1,
+            })
+        })
+        button2.addEventListener('mouseleave', () => {
+            cp.to(".loog2", {
+                rotate: 0,
+                duration: 1,
+            })})
+        button3.addEventListener('mouseenter', () => {
+            cp.to(".loog3", {
+                rotate: 360,
+                duration: 1,
+            })
+        })
+        button3.addEventListener('mouseleave', () => {
+            cp.to(".loog3", {
+                rotate: 0,
+                duration: 1,
+            })})
+        button4.addEventListener('mouseenter', () => {
+            cp.to(".loog4", {
+                rotate: 360,
+                duration: 1,
+            })
+        })
+        button4.addEventListener('mouseleave', () => {
+            cp.to(".loog4", {
+                rotate: 0,
+                duration: 1,
+            })})
+
+        let tl = gsap.timeline()
+        let st = gsap.timeline({
+            delay: 4,
+            scrollTrigger: {
+                start: '55% 60%',
+                end: 'bottom bottom',
+                scrub: 2,
+                markers: false,
+                toggleActions: 'play reverse play reverse'
+            }
+        })
+
+        // const wiggle = TweenLite.to(".hi", 0.9, {
+        //     scale: 2,
+        //     duration: 1,
+        //     ease: 'wiggle.out(0.2, 0.5)',
+        //     repeat: Infinity,
+        //     repeatType: 'loop'
+        // })
+
+        tl
+            .from('.pfp', {
+                clipPath: 'polygon(50% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%)',
+                delay: 1.5,
+                duration: 2,
+                ease: "power4.inOut"
+            })
+            .from(".content-pfp",
+                {
+                    duration: 1,
+                    yPercent: 100,
+                    ease: "elastic.out(0.3, 0.4)",
+                }
+            )
+        // .fromTo('.turbulance', {
+        //     scale: 0,
+        //     opacity: 0,
+        // }, {
+        //     opacity: 1,
+        //     scale: 1,
+        //     duration: 1
+        // })
+
+        // .from('.eyebrow', {
+        //     duration: 3,
+        //     x: '-100%',
+        //     ease: "elastic.out(0.1, 0.5)",
+        //     opacity: 1,
+        // })
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+</body>
+
+</html>
