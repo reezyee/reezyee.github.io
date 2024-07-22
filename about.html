@@ -28,45 +28,53 @@
     <main class="site-content-about">
         <section class="About_container flex justify-around items-center lg:flex-row flex-col-reverse">
             <div class="Text_about flex flex-col gap-8">
-                <div class="Header_about">
-                    <h1 class="uppercase font-unbounded Say_hi cursor-scale">hello i am Reezyee</h1>
-                    <p class="uppercase font-unbounded text-end My_name cursor-scale small">Reza Sapitra</p>
+                <div class="Header_about pt-2">
+                    <div class="wrapper-bg">
+                        <h1 class="uppercase font-unbounded Say_hi cursor-scale">hello i am Reezyee</h1>
+                    </div>
+                    <div class="wrapper">
+                        <p class="uppercase font-unbounded text-end My_name cursor-scale small">Reza Sapitra</p>
+                    </div>
                 </div>
                 <div
-                    class="Content_about font-comfortaa lg:text-3xl text-xl cursor-scale small text-justify tracking-tight">
-                    I use my passion and skills to create minimalist, interactive bold color combinations. I focus on
-                    animated and responsive digital products and i am passionate about fashion modeling and photographer
-                    with my unique style.
+                    class="Content_about wrapper-text font-comfortaa lg:text-3xl text-xl cursor-scale small text-justify tracking-tight">
+                    <p>
+                        I use my passion and skills to create a minimalist, interactive with bold color combinations
+                        content. I focus on
+                        animated and responsive content and i am passionate about fashion modeling and photographer
+                        with my unique style. <br><a href="./assets/file/Reza Sapitra - Resume.pdf" download="pdf" class="flex underline decoration-wavy mt-3"> resume <img src="./assets/img/download.svg" alt="" class="w-6 h-6 mt-1" stroke="white"></a>
+                    </p>
                 </div>
-                <div class="experted flex gap-3 flex-wrap cursor-scale small">
+                <div
+                    class="experted mb-5 flex gap-3 justify-center items-center content-center flex-wrap cursor-scale small">
                     <div
                         class="pss btn1 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <img src="./assets/img/expert/web.png" alt="" class="loog1 w-12 h-12">
-                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Web
+                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-gray-900 dark:text-white">Web
                             Developer</h5>
                     </div>
                     <div
                         class="pss btn2 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <img src="./assets/img/expert/frontend.png" alt="" class="loog2 w-12 h-12">
-                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Frontend
+                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-gray-900 dark:text-white">Frontend
                             Developer</h5>
                     </div>
                     <div
                         class="pss btn3 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <img src="./assets/img/expert/game.png" alt="" class="loog3 w-12 h-12">
-                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Game
+                        <h5 class="mb-2 lg:text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Game
                             Developer</h5>
                     </div>
                     <div
                         class="pss btn4 flex content-center items-center p-6 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <img src="./assets/img/expert/design.png" alt="" class="loog4 w-12 h-12">
-                        <h5 class="mb-2 text-xl font-comfortaa tracking-tight text-gray-900 dark:text-white">Designer
+                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-gray-900 dark:text-white">Designer
                         </h5>
                     </div>
 
                 </div>
             </div>
-            <div class="pfp rounded-t-full border-2 cursor-scale">
+            <div class="pfp rounded-t-full border-2 cursor-scale mt-3">
                 <img src="./assets/img/pfp.svg" alt="pfp" class="content-pfp">
             </div>
         </section>
@@ -115,58 +123,68 @@
             duration: 2
         })
 
-        const cp = gsap.timeline({ paused: false })
+        // const cp = gsap.timeline({ paused: false })
         const button1 = document.querySelector(".btn1")
         const button2 = document.querySelector(".btn2")
         const button3 = document.querySelector(".btn3")
         const button4 = document.querySelector(".btn4")
-        
+
 
         button1.addEventListener('mouseenter', () => {
-            cp.to(".loog1", {
+            gsap.to(".loog1", {
                 rotate: 360,
                 duration: 1,
-            })})
+                delay: 0.1
+            })
+        })
         button1.addEventListener('mouseleave', () => {
-            cp.to(".loog1", {
+            gsap.to(".loog1", {
                 rotate: 0,
                 duration: 1,
-            })})
+            })
+        })
 
         button2.addEventListener('mouseenter', () => {
-            cp.to(".loog2", {
+            gsap.to(".loog2", {
                 rotate: 360,
                 duration: 1,
+                delay: 0.1
             })
         })
         button2.addEventListener('mouseleave', () => {
-            cp.to(".loog2", {
+            gsap.to(".loog2", {
                 rotate: 0,
                 duration: 1,
-            })})
+            })
+        })
         button3.addEventListener('mouseenter', () => {
-            cp.to(".loog3", {
+            gsap.to(".loog3", {
                 rotate: 360,
                 duration: 1,
+                delay: 0.1
             })
         })
         button3.addEventListener('mouseleave', () => {
-            cp.to(".loog3", {
+            gsap.to(".loog3", {
                 rotate: 0,
-                duration: 1,
-            })})
-        button4.addEventListener('mouseenter', () => {
-            cp.to(".loog4", {
-                rotate: 360,
                 duration: 1,
             })
         })
+        button4.addEventListener('mouseenter', () => {
+            gsap.to(".loog4", {
+                rotate: 360,
+                duration: 1,
+                delay: 0.1
+            })
+        })
         button4.addEventListener('mouseleave', () => {
-            cp.to(".loog4", {
+            gsap.to(".loog4", {
                 rotate: 0,
                 duration: 1,
-            })})
+            })
+        })
 
+        const text = new SplitType(".My_name")
         let tl = gsap.timeline()
         let st = gsap.timeline({
             delay: 4,
@@ -201,6 +219,28 @@
                     ease: "elastic.out(0.3, 0.4)",
                 }
             )
+            .from(".wrapper-bg", {
+                clipPath: 'polygon(80% 0%, 80% 0%, 24% 100%, 24% 100%)',
+                ease: 'power4.inOut',
+                duration: 1.5,
+            })
+            .from(".char", {
+                y: '-300%',
+                stagger: 0.05,
+                duration: 0.5
+            })
+            .from(".wrapper-text", {
+                clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+                ease: 'power4.inOut',
+                duration: 1.5
+            })
+            .from(".experted",{
+                scale: 0,
+                opacity: 0,
+                stagger: 0.05,
+                ease: 'bounce.out(0.1, 0.5)',
+                duration: 2
+            })
         // .fromTo('.turbulance', {
         //     scale: 0,
         //     opacity: 0,
