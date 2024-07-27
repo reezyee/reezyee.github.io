@@ -48,8 +48,9 @@
             </div>
             <div class="Footer_hero flex lg:justify-between lg:flex-row flex-col lg:items-start items-end gap-2">
                 <div class="footer_text">
-                    <h1 class="lg:text-3xl text-xl font-comfortaa tracking-tight cursor-scale small">I'm a developer and designer based in
-                        Indonesia. I like making fun, sketches, and dresses.</h1>
+                    <h1 class="lg:text-3xl text-xl font-comfortaa tracking-tight cursor-scale small">I'm a developer and
+                        designer based in
+                        Indonesia. I like making <a data-img="/assets/img/path/fun.jpeg" data-fx="1">fun</a>, <a data-img="/assets/img/path/lines.jpeg" data-fx="3">lines</a>, and <a data-img="/assets/img/path/dress.jpeg" data-fx="4">dresses</a>.</h1>
                 </div>
                 <div class="footer_button">
                     <a href="contact.html" role="button"
@@ -59,9 +60,11 @@
             </div>
         </section>
     </main>
-    <header class="header fixed bottom-0 flex justify-center shadow-md my-2" style="width: 100%;">
-        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm flex justify-around gap-10 cursor-scale small">
-            <img src="./assets/img/logo.svg" alt="logo" type="svg" width="50">
+    <header class="header fixed bottom-0 flex justify-center my-2" style="width: 100%;">
+        <nav class="nav font-semibold lg:text-lg md:text-md sm:text-sm text-sm flex justify-around gap-10">
+            <a href="index.html">
+                <img src="./assets/img/logo.svg" alt="logo" type="svg" width="50">
+            </a>
             <ul class="link flex items-end justify-end content-center font-comfortaa">
                 <a href="about.html">
                     <li class="py-4 text-white duration-200 cursor-pointer">
@@ -69,16 +72,21 @@
                         <span>,</span>
                     </li>
                 </a>
-                <a href="project.html">
+                <!-- <a href="project.html">
                     <li class="px-2 py-4 text-white duration-200 cursor-pointer">
                         projects
                     </li>
-                </a>
+                </a> -->
             </ul>
         </nav>
     </header>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/js/charming.min.js"></script>
+    <script src="/js/hover.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/imgloaded.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
