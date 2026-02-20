@@ -7,8 +7,7 @@
     <link rel="icon" href="./assets/img/logo.svg">
     <title>Reezyee</title>
     <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-        referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -16,19 +15,21 @@
     <div class="cursor"></div>
     <section class="Contact_container">
         <main id="main-content" class="main-content z-10">
-            <div id="contact" class="">
-                <a href="index.html" class="lg:text-3xl flex justify-end items-center font-comfortaa pr-6 pt-6 hlink"> 
-                    <svg class="text-gray-800 dark:text-white lg:w-8 w-5" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <path stroke="#c7c1b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <div id="contact" class="relative">
+                <a href="index.html" id="back" class="pointer-events-auto lg:text-3xl flex justify-end items-center font-comfortaa bg-[#c7c1b6] h-screen absolute top-0 right-0 z-50">
+                    <svg class="lg:w-8 w-5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="#153378" viewBox="0 0 24 24">
+                        <path stroke="#153378" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m15 19-7-7 7-7" />
-                    </svg>Home
+                    </svg>
                 </a>
-                <p class="lg:text-6xl text-2xl text-center font-unbounded cursor-scale">
-                    HELLO.
-                </p>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="lg:text-6xl w-fit pt-20 text-2xl text-center font-unbounded cursor-scale">
+                        HELLO.
+                    </p>
+                </div>
                 <p class="lg:text-3xl mdt:ext-md text-center font-comfortaa">
-                    Please, contact me as soon as you can!<br>let's work together</p>
+                    Please, contact me as soon as you can!<br>Tell me about your idea.</p>
                 <div class="card flex flex-col justify-center items-center">
                     <form id="contact-form" onsubmit="handleForm(event)" autocomplete="off">
                         <div class="input-group font-comfortaa">
@@ -40,55 +41,84 @@
                             <label for="">Your Email</label>
                         </div>
                         <div class="input-group font-comfortaa">
-                            <textarea name="message" required></textarea>
+                            <textarea name="message" class="space-y-3 mt-2" required></textarea>
                             <label for="">Message</label>
                         </div>
                         <input type="submit" value="Send" class="btnEmail font-comfortaa" />
                     </form>
                 </div>
                    <div class="flex flex-wrap gap-10 justify-center pt-10">
-    <!-- Github -->
-    <a href="http://github.com/reezyee" target="_blank">
-        <button type="button"
-            class="font-comfortaa cursor-scale small h-10 text-white bg-black hover:bg-gray-900 focus:ring-4 gap-2 focus:outline-none focus:ring-gray-500 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-slate-900">
-            <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd"
-                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                    clip-rule="evenodd" />
+    <!-- Social Icons Only -->
+        <div class="flex items-center justify-center gap-10 mt-16">
+          <!-- Github -->
+          <a
+            href="https://github.com/reezyee"
+            target="_blank"
+            class="group transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-white group-hover:scale-110 transition duration-300"
+              viewBox="0 0 30 30"
+              fill="currentColor"
+            >
+              <path
+                d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 
+      c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 
+      c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 
+      c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 
+      c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 
+      c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 
+      c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 
+      c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+              />
             </svg>
-            Github
-        </button>
-    </a>
+          </a>
 
-    <!-- Instagram -->
-    <a href="http://instagram.com/reezyee" target="_blank">
-        <button type="button"
-            class="font-comfortaa cursor-scale small h-10 text-white bg-gradient-to-tr from-red-600 to-blue-600 via-pink-600 hover:bg-gradient-to-tr hover:from-red-800 hover:to-blue-800 hover:via-pink-800 focus:ring-4 gap-2 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-red-900">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 50 50" stroke="white"
-                stroke-width="3">
-                <path
-                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
-                </path>
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/reezyee"
+            target="_blank"
+            class="group transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-white group-hover:scale-110 transition duration-300"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1.2"
+                fill="currentColor"
+                stroke="none"
+              />
             </svg>
-            Instagram
-        </button>
-    </a>
+          </a>
 
-    <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/reza-sapitra" target="_blank">
-        <button type="button"
-            class="font-comfortaa cursor-scale small h-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 gap-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 text-center inline-flex items-center dark:focus:ring-blue-800 dark:hover:bg-blue-900">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 50 50" fill="white">
-                <path
-                    d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M17,39h-5V20h5V39z
-                    M14.5,17.5c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S16.157,17.5,14.5,17.5z M39,39h-5v-9.5c0-2.485-2.015-4.5-4.5-4.5
-                    S25,27.015,25,29.5V39h-5V20h5v2.021C26.064,20.379,28.388,19,31,19c4.418,0,8,3.582,8,8V39z"/>
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/in/reza-sapitra"
+            target="_blank"
+            class="group transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-white group-hover:scale-110 transition duration-300"
+              viewBox="0 0 50 50"
+              fill="currentColor"
+            >
+              <path
+                d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M17,39h-5V20h5V39z M14.5,17.5c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S16.157,17.5,14.5,17.5z M39,39h-5v-9.5c0-2.485-2.015-4.5-4.5-4.5 S25,27.015,25,29.5V39h-5V20h5v2.021C26.064,20.379,28.388,19,31,19c4.418,0,8,3.582,8,8V39z"
+              />
             </svg>
-            LinkedIn
-        </button>
-    </a>
-</div>
+          </a>
+        </div>
         </main>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -132,6 +162,13 @@
         gsap.from(".Contact_container", {
             clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
             delay: 0.5
+        })
+        gsap.from("#back", {
+            // x: 100,
+            opacity: 0,
+            width: 0,
+            delay: 0.8,
+            duration: 1
         })
 
         const lenis = new Lenis()
