@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans p-6 md:p-12">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm">
+        <!-- Karena di dalam folder project/, kembali ke root pakai ../index.html -->
+        <a href="../index.html" class="text-blue-600 hover:underline mb-6 inline-block">&larr; Back to Projects</a>
+        
+        <div id="project-content">
+            <!-- Konten detail akan dimuat lewat JS di sini -->
+        </div>
+    </div>
+
+    <!-- Mundur satu folder untuk mengakses folder js/projectData.js -->
+    <script src="../js/projectData.js"></script> 
+    <script>
+        // Ambil parameter id dari URL (contoh: project/index.html?id=cameree)
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        // Cari data proyek berdasarkan id
+        const project = projectsData.find(p => p.id === projectId);
+        const container = document.getElementById('project-content');
+
+        if (project) {
+            container.innerHTML = `
+                <span class="text-sm uppercase tracking-wider text-blue-600 font-semibold">${project.category}</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4 uppercase">${project.title}</h1>
+                <img src="../${project.image}" alt="${project.title}" class="w-full h-auto rounded-lg mb-6 shadow-md object-cover max-h-[450px]">
+                
+                <h3 class="text-xl font-semibold mb-2">Overview</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">${project.fullDescription || project.description}</p>
+                
+                <h3 class="text-xl font-semibold mb-2">Technologies Used</h3>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    ${project.technologies.map(tech => `<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">${tech}</span>`).join('')}
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="${project.liveUrl}" target="_blank" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors">Live Demo</a>
+                    <a href="${project.githubUrl}" target="_blank" class="border border-gray-300 px-5 py-2.5 rounded-lg hover:bg-gray-50 transition-colors">GitHub Repository</a>
+                </div>
+            `;
+        } else {
+            container.innerHTML = `<p class="text-red-500 text-center py-10">Project not found.</p>`;
+        }
+    </script>
+</body>
+</html>

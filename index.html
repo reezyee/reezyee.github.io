@@ -1,527 +1,907 @@
-<!DOCTYPE html>
+<!-- Home -->
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/logo.svg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/img/logo.svg" type="image/x-icon" />
     <title>Reezyee</title>
     <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
 
-<style>
-</style>
+  <style></style>
 
-<body>
+  <body style="background-color: #c7c1b6">
     <div class="cursor"></div>
-    <main class="site-content">
-        <section class="Hero_container">
-            <div class="Header_hero wrapper">
-                <p class="split-type font-unbounded text-center flex uppercase cursor-scale">
-                    Developer <span class="lg:text-3xl md:text-3xl sm:text-2xl nd "> & </span> Designer</p>
+    <main class="site-content cursor-none">
+      <section class="Hero_container gsap-reveal br">
+        <div class="Header_hero wrapper">
+          <h1
+            class="split-type font-unbounded text-center flex uppercase cursor-scale"
+          >
+            Developer
+            <span class="lg:text-3xl md:text-3xl sm:text-2xl nd"> & </span>
+            Designer
+          </h1>
+        </div>
+
+        <div class="Img_hero">
+          <svg style="display: none">
+            <defs>
+              <filter id="waveFilter">
+                <feTurbulence
+                  id="turbulence"
+                  type="fractalNoise"
+                  baseFrequency="0.01 0.01"
+                  numOctaves="1"
+                  result="noise"
+                />
+                <feDisplacementMap
+                  in="SourceGraphic"
+                  in2="noise"
+                  scale="0"
+                  xChannelSelector="R"
+                  yChannelSelector="G"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <!-- <video src="https://res.cloudinary.com/dyh1najmn/video/upload/v1782920353/video_01_tsaz65.mp4" autoplay muted loop class="img cursor-scale h-[500px]" id="video-hero"></video> -->
+          <img
+            src="/assets/img/abstract.jpeg"
+            alt=""
+            class="img cursor-scale"
+          />
+        </div>
+        <div
+          class="Footer_hero flex justify-between lg:flex-row md:flex-row flex-col lg:items-center items-center gap-2 mt-5 lg:px-24 px-10"
+        >
+          <div class="footer_text">
+            <p
+              class="lg:text-2xl md:text-xl text-md max-w-xl max font-comfortaa tracking-tight cursor-scale small"
+            >
+              I'm a developer and designer based in Indonesia. I thrive on
+              coding, creating, and capturing the world.
+            </p>
+          </div>
+          <div class="footer_button">
+            <a
+              href="javascript:void(0)"
+              onclick="goToContact(event)"
+              role="button"
+              id="contact"
+              class="btn rounded-full text-[#153378] lg:text-3xl text-lg text-nowrap p-3 font-comfortaa cursor-scale small"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="About_container crm flex justify-around items-center lg:flex-row flex-col-reverse"
+      >
+        <div class="Text_about flex flex-col lg:gap-8 gap-4">
+          <div class="Header_about pt-2">
+            <div class="wrapper-bg">
+              <h1
+                class="uppercase font-unbounded Say_hi cursor-scale text-center"
+              >
+                hello i am Reezyee
+              </h1>
             </div>
-            <div class="Img_hero">
-                <img src="/assets/img/abstract.jpeg" alt="" class="img cursor-scale">
+            <div class="wrapper">
+              <p
+                class="uppercase font-unbounded text-end My_name cursor-scale small wrapper-txt lg:me-0 md:me-0 me-8"
+              >
+                Reza Sapitra
+              </p>
+            </div>
+          </div>
+          <div
+            class="Content_about wrapper-content font-comfortaa cursor-scale small text-justify tracking-tight"
+          >
+            <p class="lg:text-2xl md:text-xl text-lg max-w-4xl max px-4">
+              I use my passion and skills to craft minimalist and interactive
+              digital experiences with bold colour compositions. My focus lies
+              in seamless animations and intuitive design. Beyond the screen,
+              I’m constantly capturing the world through my camera lens.
+            </p>
+          </div>
+          <div
+            class="experted mb-5 flex gap-2 justify-center items-center content-center flex-wrap cursor-scale small"
+          >
+            <div
+              class="pss btn1 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80"
+            >
+              <img
+                src="/assets/img/expert/web.png"
+                alt=""
+                class="loog1 lg:w-12 lg:h-12 w-6 h-6"
+              />
+              <h5
+                class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]"
+              >
+                Web Developer
+              </h5>
             </div>
             <div
-                class="Footer_hero flex justify-between lg:flex-row md:flex-row flex-col lg:items-start items-center gap-2 mt-5 lg:px-24 px-10">
-                <div class="footer_text">
-                    <h1
-                        class="lg:text-2xl md:text-xl text-md max-w-xl max font-comfortaa tracking-tight cursor-scale small">
-                        I'm a
-                        developer and
-                        designer based in
-                        Indonesia. I like making fun, sketch, and dress.</h1>
-                </div>
-                <div class="footer_button">
-                    <a href="/contact.html" role="button"
-                        class="btn rounded-full lg:text-3xl text-lg text-nowrap p-3 font-comfortaa cursor-scale small">Contact
-                        Me</a>
-                </div>
+              class="pss btn2 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80"
+            >
+              <img
+                src="/assets/img/expert/frontend.png"
+                alt=""
+                class="loog2 lg:w-12 lg:h-12 w-6 h-6"
+              />
+              <h5
+                class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]"
+              >
+                Frontend Developer
+              </h5>
             </div>
-        </section>
-        <section class="About_container flex justify-around items-center lg:flex-row flex-col-reverse">
-            <div class="Text_about flex flex-col lg:gap-8 gap-4">
-                <div class="Header_about pt-2">
-                    <div class="wrapper-bg">
-                        <h1 class="uppercase font-unbounded Say_hi cursor-scale text-center">hello i am Reezyee</h1>
-                    </div>
-                    <div class="wrapper">
-                        <p class="uppercase font-unbounded text-end My_name cursor-scale small wrapper-text lg:me-0 md:me-0 me-8">Reza
-                            Sapitra</p>
-                    </div>
-                </div>
-                <div class="Content_about wrapper-text x`font-comfortaa cursor-scale small text-justify tracking-tight">
-                    <p class="lg:text-2xl md:text-xl text-lg max-w-4xl max px-4 ">
-                       I use my passion and skills to craft minimalist and interactive digital experiences with bold colour compositions. My focus lies in animation and responsive design. In addition, I explore the world of fashion modelling and photography through a strong visual perspective.
-                    </p>
-                </div>
-                <div
-                    class="experted mb-5 flex gap-2 justify-center items-center content-center flex-wrap cursor-scale small">
-                    <div
-                        class="pss btn1 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80">
-                        <img src="/assets/img/expert/web.png" alt="" class="loog1 lg:w-12 lg:h-12 w-6 h-6">
-                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]">
-                            Web
-                            Developer</h5>
-                    </div>
-                    <div
-                        class="pss btn2 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80">
-                        <img src="/assets/img/expert/frontend.png" alt="" class="loog2 lg:w-12 lg:h-12 w-6 h-6">
-                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]">
-                            Frontend
-                            Developer</h5>
-                    </div>
-                    <div
-                        class="pss btn3 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80">
-                        <img src="/assets/img/expert/game.png" alt="" class="loog3 lg:w-12 lg:h-12 w-6 h-6">
-                        <h5 class="mb-2 lg:text-xl font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]">
-                            Game
-                            Developer</h5>
-                    </div>
-                    <div
-                        class="pss btn4 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80">
-                        <img src="/assets/img/expert/design.png" alt="" class="loog4 lg:w-12 lg:h-12 w-6 h-6">
-                        <h5 class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]">
-                            UI/UX Designer
-                        </h5>
-                    </div>
-                </div>
+            <div
+              class="pss btn4 flex content-center items-center p-6 rounded-lg shadow bg-[#c7c1b6] hover:bg-[#c7c1b6]/80 dark:bg-[#c7c1b6] dark:border-gray-700 dark:hover:bg-[#c7c1b6]/80"
+            >
+              <img
+                src="/assets/img/expert/design.png"
+                alt=""
+                class="loog4 lg:w-12 lg:h-12 w-6 h-6"
+              />
+              <h5
+                class="mb-2 lg:text-xl text-md font-comfortaa tracking-tight text-[#153378] dark:text-[#153378]"
+              >
+                UI/UX Designer
+              </h5>
             </div>
-            <div class="pfp rounded-t-full border-2 cursor-scale mt-3">
-                <img src="/assets/img/pfp.svg" alt="pfp" class="content-pfp">
+          </div>
+        </div>
+        <div class="pfp rounded-t-full border-2 cursor-scale mt-3">
+          <img src="/assets/img/pfp.svg" alt="pfp" class="content-pfp" />
+        </div>
+      </section>
+      <section class="Project_container br">
+        <div class="flex flex-col items-center">
+          <!-- Header Section -->
+          <div
+            class="Header_project flex flex-col lg:flex-row uppercase justify-center cursor-scale small"
+          >
+            <p
+              class="font-comfortaa lg:text-2xl pt-5 eyebrow lg:ms-0 md:ms-0 ms-4"
+            >
+              What I Have Done <span class="what">?</span>
+            </p>
+            <div class="wrapper-project">
+              <p
+                class="lg:text-6xl text-3xl font-unbounded lg:me-0 md:me-0 me-4"
+              >
+                Projects
+              </p>
             </div>
-        </section>
-        <section class="Project_container">
-            <div class="flex flex-col items-center">
-                <div class="Header_project flex flex-col lg:flex-row uppercase justify-center cursor-scale small">
-                    <p class="font-comfortaa lg:text-2xl pt-5 eyebrow lg:ms-0 md:ms-0 ms-4">What I Have Done <span class="what">?</span>
-                    </p>
-                    <div class="wrapper-project">
-                        <p class="lg:text-6xl text-3xl font-unbounded lg:me-0 md:me-0 me-4">Projects</p>
+          </div>
+
+          <!-- Content Section -->
+          <div
+            class="Content_project text-center font-comfortaa text-justify tracking-tight"
+          >
+            <p
+              class="wrapper-textp lg:text-2xl md:text-xl text-lg max-w-6xl max p-4"
+            >
+              Following projects showcase my skills and experience through
+              real-world examples of my work. Each project is briefly described
+              with links to code repositories and live demos in it. It reflects
+              my ability to solve complex problems, work with different
+              technologies, and manage projects effectively.
+            </p>
+
+            <nav>
+              <ul>
+                <!-- Project 1: Caméree -->
+                <li class="list group border-b border-[#153378]">
+                  <div
+                    class="link flex flex-col md:flex-row justify-between items-start md:items-center py-10 transition-all duration-300"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-3xl md:text-5xl font-unbounded uppercase group-hover:text-[#153378] transition-colors"
+                      >
+                        Caméree
+                      </span>
+                      <p class="mt-4 text-gray-500 font-comfortaa max-w-3xl">
+                        Caméree transforms your device into an elegant,
+                        intuitive photo booth experience with live effects,
+                        collage modes, and instant saving. Built for creators,
+                        events, and anyone who loves capturing beautiful moments
+                        effortlessly.
+                      </p>
                     </div>
-                </div>
-                <div class="Content_project text-center font-comfortaa text-justify tracking-tight">
-                    <p class="wrapper-textp lg:text-2xl md:text-xl text-lg max-w-6xl max p-4">Following projects showcases
-                        my skills and experience through real-world examples of my
-                        work. Each
-                        project is briefly described with links to code repositories and live demos in it. It
-                        reflects my
-                        ability to solve complex problems, work with different technologies, and manage projects
-                        effectively.</p>
-                    <nav>
-                        <ul>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://cameree.vercel.app" target="_blank">Caméree - Photo Booth</a></span>
-                                    <p class="lg:max-w-lg text-wrap">Embrace the vintage charm of photography with Caméree's unique vintage filters and retro aesthetics.</p>
-                                    <a href="https://github.com/reezyee/cameree"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                            clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/cam.png" alt="Caméree" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://apotekpedia.com" target="_blank">Apotek Amanah</a></span>
-                                    <p class="lg:max-w-lg text-wrap">Apotek Amanah is a pharmacy management platform that helps manage medicine stocks, sales transactions, and product information efficiently.</p>
-                                    <a href="https://github.com/reezyee/Pharmacy"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                            clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/aa.jpg" alt="Apotek Amanah" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://agro-kulit.vercel.app" target="_blank">Agro Kulit</a></span>
-                                    <p class="lg:max-w-lg text-wrap">Agro Kulit is an online marketplace for the leather industry, designed to connect producers and buyers with ease.</p>
-                                    <a href="https://github.com/SalvatoreTech/AgroKulit"><svg
-                                        class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/ag.png" alt="Agro Kulit" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://pipit-sandi.vercel.app" target="_blank">Undangan Digital</a></span>
-                                    <p class="lg:max-w-lg text-wrap">Digital Invitation is an elegant and practical online invitation platform for your various special events, equipped with a modern design, online RSVP, and easy sharing features.</p>
-                                    <a href="https://github.com/reezyee/pipit-sandi"><svg
-                                        class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/ud.png" alt="Undangan Digital" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://ukk-2025-xi.vercel.app/" target="_blank">V4TAS</a></span>
-                                    <p class="lg:max-w-lg text-wrap">V4TAS is a school profile website for SMKN 4 Tasikmalaya. 
-  It presents information about the school, departments, facilities, and activities, 
-  built to provide students and the public with easy access to official information.</p>
-                                    <a href="https://github.com/reezyee/ukk-2025"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/v4tas.png" alt="V4TAS" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://jasa-raharja.vercel.app/" target="_blank">Jasa Raharja</a></span>
-                                    <p class="lg:max-w-lg text-wrap">A profile website for Jasa Raharja, built to present company information, services, and general public details with a clean modern design.</p>
-                                    <a href="https://github.com/reezyee/jasa-raharja"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/jr.png" alt="Jasa Raharja" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://dipusipda.vercel.app/" target="_blank">Dipusipda</a></span>
-                                    <p class="lg:max-w-lg text-wrap">A website for Dipusipda (Library and Archives Service), showcasing institutional profile, services, and information in a structured and accessible layout.</p>
-                                    <a href="https://github.com/reezyee/dipusipda"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/dipusipda.png" alt="Dipusipda" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link"><a href="https://dprd-tasik.vercel.app/" target="_blank">DPRD Tasik</a></span>
-                                    <p class="lg:max-w-lg text-wrap">A profile website concept for DPRD Kota Tasikmalaya, highlighting organizational information, activities, and member details in a simple digital format.</p>
-                                    <a href="https://github.com/reezyee/dprd-tasik"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/dprd.png" alt="DPRD Tasik" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                           <li class="list flex justify-around content-center">
-                                <div class="link">
-                                    <span class="text-link">
-                                        <a href="https://digital-library-blond.vercel.app" target="_blank">Perpus Digital</a></span>
-                                    <p class="lg:max-w-lg text-wrap">Web application that enables
-                                        users to input data,
-                                        view history, and search data. And also allows to search books and view detail
-                                        book.</p>
-                                    <a href="https://github.com/reezyee/perpusDigital"><svg
-                                            class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#153378"
-                                            viewBox="0 0 24 24">
-                                            <path fill-rule="evenodd"
-                                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </a>
-                                    <div class="hover-reveal image01">
-                                        <img src="/assets/img/perpus.png" alt="zyeeilish" class="hidden-img">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </section>
+                    <div
+                      class="flex flex-wrap gap-5 justify-center items-center mt-4 md:mt-0"
+                    >
+                      <a
+                        href="https://cameree.vercel.app"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="Live Demo Caméree"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          class="w-6 h-6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            stroke="#153378"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://github.com/reezyee/cameree"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="GitHub Repository Caméree"
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="#153378"
+                            fill-rule="evenodd"
+                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hover-reveal image01">
+                      <img
+                        src="/assets/img/cam.png"
+                        alt="Caméree"
+                        class="hidden-img"
+                      />
+                    </div>
+                  </div>
+                </li>
 
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-        <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
-        <script src="https://unpkg.com/split-type"></script>
-        <script src="/js/main.js"></script>
-        <script>
-            //SmoothScrollVar
-            const lenis = new Lenis()
-            //ButtonAnimVar
-            const button = document.querySelector(".btn")
-            const button1 = document.querySelector(".btn1")
-            const button2 = document.querySelector(".btn2")
-            const button3 = document.querySelector(".btn3")
-            const button4 = document.querySelector(".btn4")
+                <!-- Project 2: Digital Invitation -->
+                <li class="list group border-b border-[#153378]">
+                  <div
+                    class="link flex flex-col md:flex-row justify-between items-start md:items-center py-10 transition-all duration-300"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-3xl md:text-5xl font-unbounded uppercase group-hover:text-[#153378] transition-colors"
+                      >
+                        Digital Invitation
+                      </span>
+                      <p class="mt-4 text-gray-500 font-comfortaa max-w-3xl">
+                        An elegant and eco-friendly digital invitation platform
+                        for weddings and special events. Featuring a modern,
+                        responsive design, an interactive guest RSVP system, and
+                        Google Maps integration for venue locations.
+                      </p>
+                    </div>
+                    <div
+                      class="flex flex-wrap gap-5 justify-center items-center mt-4 md:mt-0"
+                    >
+                      <a
+                        href="https://pipit-sandi.vercel.app"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="Live Demo Digital Invitation"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          class="w-6 h-6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            stroke="#153378"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://github.com/reezyee/pipit-sandi"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="GitHub Repository Digital Invitation"
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="#153378"
+                            fill-rule="evenodd"
+                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hover-reveal image02">
+                      <img
+                        src="/assets/img/ud.png"
+                        alt="Digital Invitation"
+                        class="hidden-img"
+                      />
+                    </div>
+                  </div>
+                </li>
 
-            //OtherAnimVar
-            const text1 = new SplitType('.split-type')
+                <!-- Project 3: Agro Kulit -->
+                <li class="list group border-b border-[#153378]">
+                  <div
+                    class="link flex flex-col md:flex-row justify-between items-start md:items-center py-10 transition-all duration-300"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-3xl md:text-5xl font-unbounded uppercase group-hover:text-[#153378] transition-colors"
+                      >
+                        Agro Kulit
+                      </span>
+                      <p class="mt-4 text-gray-500 font-comfortaa max-w-3xl">
+                        Agro Kulit is an online marketplace for the leather
+                        industry, designed to easily connect producers and
+                        buyers.
+                      </p>
+                    </div>
+                    <div
+                      class="flex flex-wrap gap-5 justify-center items-center mt-4 md:mt-0"
+                    >
+                      <a
+                        href="https://agro-kulit.vercel.app"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="Live Demo Agro Kulit"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          class="w-6 h-6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            stroke="#153378"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://github.com/SalvatoreTech/AgroKulit"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="GitHub Repository Agro Kulit"
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="#153378"
+                            fill-rule="evenodd"
+                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hover-reveal image03">
+                      <img
+                        src="/assets/img/ag.png"
+                        alt="Agro Kulit"
+                        class="hidden-img"
+                      />
+                    </div>
+                  </div>
+                </li>
 
-            //SetTimeline
-            let tl = gsap.timeline();
+                <!-- Project 4: Perpus Digital -->
+                <li class="list group border-none">
+                  <div
+                    class="link flex flex-col md:flex-row justify-between items-start md:items-center py-10 transition-all duration-300"
+                  >
+                    <div class="flex flex-col">
+                      <span
+                        class="text-3xl md:text-5xl font-unbounded uppercase group-hover:text-[#153378] transition-colors"
+                      >
+                        Perpus Digital
+                      </span>
+                      <p class="mt-4 text-gray-500 font-comfortaa max-w-3xl">
+                        It provides modules for librarians to catalog books,
+                        manage loans and returns, and generate dynamic reports.
+                        Students can browse the collection, check availability,
+                        and view their personal borrowing history.
+                      </p>
+                    </div>
+                    <div
+                      class="flex flex-wrap gap-5 justify-center items-center mt-4 md:mt-0"
+                    >
+                      <a
+                        href="https://digital-library-blond.vercel.app"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="Live Demo Perpus Digital"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          class="w-6 h-6"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            stroke="#153378"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://github.com/reezyee/perpusDigital"
+                        target="_blank"
+                        class="block hover:opacity-70 transition-opacity"
+                        aria-label="GitHub Repository Perpus Digital"
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="#153378"
+                            fill-rule="evenodd"
+                            d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="hover-reveal image05">
+                      <img
+                        src="/assets/img/perpus.png"
+                        alt="Perpus Digital"
+                        class="hidden-img"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="Direct_container flex justify-center items-center crm">
+        <div
+          class="flex text-[#c7c1b6] gap-2 justify-center items-center flex-col cursor-scale small"
+        >
+          <h2 class="Direct_font font-unbounded text-4xl">
+            Let's see another world of Reezyee.
+          </h2>
+          <a
+            href="javascript:void(0)"
+            onclick="goToLibrary(event)"
+            class="Direct_btn"
+          >
+            <svg
+              class="w-10 h-10"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              transform="rotate(180)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 12H20M4 12L8 8M4 12L8 16"
+                  stroke="#c7c1b6"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </section> -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      //SmoothScrollVar
+      const lenis = new Lenis();
+      //ButtonAnimVar
+      const button = document.querySelector(".btn");
+      const button1 = document.querySelector(".btn1");
+      const button2 = document.querySelector(".btn2");
+      // const button3 = document.querySelector(".btn3")
+      const button4 = document.querySelector(".btn4");
 
-            //ScrollTriggerVar for about
-            let st_about = gsap.timeline({
-                scrollTrigger: {
-                    start: '20% 40%',
-                    end: 'center 20%',
-                    // scrub: 3,
-                    // markers: true,
-                }
-            })
+      //OtherAnimVar
+      const text1 = new SplitType(".split-type");
 
-            //ScrollTriggerVar for project
-            let st_project = gsap.timeline({
-                scrollTrigger: {
-                    start: '40% center',
-                    end: 'center 0%',
-                    // scrub: 3,
-                    // markers: true,
-                }
-            })
-            const link = document.querySelectorAll(".link")
-            const hoverReveal = document.querySelectorAll(".hover-reveal")
-            const linkImages = document.querySelectorAll(".hidden-img")
+      //SetTimeline
+      let tl = gsap.timeline();
 
-            for (let i = 0; i < link.length; i++) {
-                link[i].addEventListener("mousemove", (e) => {
-                    hoverReveal[i].style.opacity = 1;
-                    hoverReveal[i].style.transform = `translate(-100%, -25%) rotate(5deg)`;
-                    linkImages[i].style.transform = 'scale(1,1)';
-                    hoverReveal[i].style.left = e.clientX + "px";
-                })
-                link[i].addEventListener("mouseleave", (e) => {
-                    hoverReveal[i].style.opacity = 0;
-                    hoverReveal[i].style.transform = `translate(-25%, 25%) rotate(-5deg)`;
-                    linkImages[i].style.transform = 'scale(0.8, 0.8)';
-                })
-            }
-            //ButtonAnim
-            button.addEventListener('mouseenter', () => {
-                gsap.to(".img", {
-                    clipPath: 'polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)',
-                    duration: 0.5,
-                    ease: 'power4.inOut'
-                })
-            })
-            button.addEventListener('mouseleave', () => {
-                gsap.to(".img", {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                    duration: 0.5,
-                })
-            })
+      //ScrollTriggerVar for about
+      let st_about = gsap.timeline({
+        scrollTrigger: {
+          start: "20% 40%",
+          end: "center 20%",
+          // scrub: 3,
+          // markers: true,
+        },
+      });
 
-            button1.addEventListener('mouseenter', () => {
-                gsap.to(".loog1", {
-                    rotate: 360,
-                    duration: 1,
-                    delay: 0.1
-                })
-            })
-            button1.addEventListener('mouseleave', () => {
-                gsap.to(".loog1", {
-                    rotate: 0,
-                    duration: 1,
-                })
-            })
+      //ScrollTriggerVar for project
+      let st_project = gsap.timeline({
+        scrollTrigger: {
+          start: "50% center",
+          end: "80% center",
+          // scrub: 3,
+            // markers: true,
+        },
+      });
 
-            button2.addEventListener('mouseenter', () => {
-                gsap.to(".loog2", {
-                    rotate: 360,
-                    duration: 1,
-                    delay: 0.1
-                })
-            })
-            button2.addEventListener('mouseleave', () => {
-                gsap.to(".loog2", {
-                    rotate: 0,
-                    duration: 1,
-                })
-            })
+      tl.to(
+        ".gsap-reveal",
+        {
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power2.out",
+        },
+        0,
+      );
 
-            button3.addEventListener('mouseenter', () => {
-                gsap.to(".loog3", {
-                    rotate: 360,
-                    duration: 1,
-                    delay: 0.1
-                })
-            })
-            button3.addEventListener('mouseleave', () => {
-                gsap.to(".loog3", {
-                    rotate: 0,
-                    duration: 1,
-                })
-            })
+      const link = document.querySelectorAll(".link");
+      const hoverReveal = document.querySelectorAll(".hover-reveal");
+      const linkImages = document.querySelectorAll(".hidden-img");
 
-            button4.addEventListener('mouseenter', () => {
-                gsap.to(".loog4", {
-                    rotate: 360,
-                    duration: 1,
-                    delay: 0.1
-                })
-            })
-            button4.addEventListener('mouseleave', () => {
-                gsap.to(".loog4", {
-                    rotate: 0,
-                    duration: 1,
-                })
-            })
+      for (let i = 0; i < link.length; i++) {
+        link[i].addEventListener("mousemove", (e) => {
+          hoverReveal[i].style.opacity = 1;
+          hoverReveal[i].style.transform = `translate(-50%, -25%) rotate(5deg)`;
+          linkImages[i].style.transform = "scale(1,1)";
+          hoverReveal[i].style.left = e.clientX + "px";
+        });
+        link[i].addEventListener("mouseleave", (e) => {
+          hoverReveal[i].style.opacity = 0;
+          hoverReveal[i].style.transform = `translate(-25%, 25%) rotate(-5deg)`;
+          linkImages[i].style.transform = "scale(0.8, 0.8)";
+        });
+      }
 
-            //Shakes
-            const wiggle = TweenLite.to(".what", 0.9, {
-                scale: 4,
-                duration: 1,
-                ease: 'wiggle.out(0.2, 0.5)',
-                repeat: Infinity,
-                repeatType: 'loop'
-            })
+      //ButtonAnim
+      const turbulence = document.querySelector("#turbulence");
+      const displacementMap = document.querySelector(
+        "#waveFilter feDisplacementMap",
+      );
 
-            //OtherAnim
-            gsap.from('.About_container', {
-                clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-                ease: "power4.inOut",
-                duration: 2
-            })
+      gsap.to(turbulence, {
+        attr: { baseFrequency: "0.02 0.05" },
+        duration: 5,
+        repeat: -1,
+        yoyo: true,
+        ease: "none",
+      });
 
-            //TimelineAnim
-            tl
-                //ImageTrans
-                .from(".img", {
-                    clipPath: 'polygon(82% 0, 82% 0, 19% 100%, 19% 100%)',
-                    duration: 1.5,
-                    ease: "power4.inOut",
-                    delay: 1.8
-                })
-                //TittleAnim
-                .from([".char", ".nd"], {
-                    y: '300%',
-                    stagger: 0.05,
-                    duration: 0.5
-                })
-                .from(".footer_text", {
-                    opacity: 0,
-                    duration: 0.2,
-                })
-                .from(".btn", {
-                    opacity: 0,
-                    duration: 0.2
-                })
+      button.addEventListener("mouseenter", () => {
+        gsap.to(displacementMap, {
+          attr: { scale: 30 },
+          duration: 0.8,
+          ease: "power2.out",
+        });
+      });
 
-            st_about
-                .from('.pfp', {
-                    clipPath: 'polygon(50% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%)',
-                    duration: 2,
-                    ease: "power4.inOut"
-                })
-                .from(".content-pfp",
-                    {
-                        duration: 1,
-                        scale: 0,
-                        yPercent: 100,
-                        ease: "elastic.out(0.3, 0.4)",
-                    }
-                )
-                .from(".wrapper-bg", {
-                    clipPath: 'polygon(80% 0%, 80% 0%, 24% 100%, 24% 100%)',
-                    ease: 'power4.inOut',
-                    duration: 1.5,
-                }, 0.5)
-                .from(".wrapper-text", {
-                    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-                    ease: 'power4.inOut',
-                    duration: 1.5
-                }, 0.6)
-                .from(".pss", {
-                    scale: 0,
-                    opacity: 0,
-                    stagger: 0.05,
-                    ease: 'bounce.out(0.1, 0.5)',
-                    duration: 2
-                }, 0.6)
+      button.addEventListener("mouseleave", () => {
+        gsap.to(displacementMap, {
+          attr: { scale: 0 },
+          duration: 0.5,
+        });
+      });
 
+      button1.addEventListener("mouseenter", () => {
+        gsap.to(".loog1", {
+          rotate: 360,
+          duration: 1,
+          delay: 0.1,
+        });
+      });
+      button1.addEventListener("mouseleave", () => {
+        gsap.to(".loog1", {
+          rotate: 0,
+          duration: 1,
+        });
+      });
 
-            st_project
-                .from(".eyebrow", {
-                    scale: 0,
-                })
-                .from(".wrapper-project", {
-                    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-                    duration: 1.2,
-                    ease: 'power4.inOut'
-                }, 0.5)
-                .from(".wrapper-textp", {
-                    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-                    duration: 1.2,
-                    ease: 'power4.inOut'
-                }, 0.5)
-                .from(".list", {
-                    duration: 1,
-                    opacity: 0,
-                    ease: "power1.inOut",
-                    stagger: 0.05
-                }
-                )
+      button2.addEventListener("mouseenter", () => {
+        gsap.to(".loog2", {
+          rotate: 360,
+          duration: 1,
+          delay: 0.1,
+        });
+      });
+      button2.addEventListener("mouseleave", () => {
+        gsap.to(".loog2", {
+          rotate: 0,
+          duration: 1,
+        });
+      });
 
+      button4.addEventListener("mouseenter", () => {
+        gsap.to(".loog4", {
+          rotate: 360,
+          duration: 1,
+          delay: 0.1,
+        });
+      });
+      button4.addEventListener("mouseleave", () => {
+        gsap.to(".loog4", {
+          rotate: 0,
+          duration: 1,
+        });
+      });
 
-            lenis.on('scroll', (e) => {
-            })
+      //Shakes
+      const wiggle = TweenLite.to(".what", 0.9, {
+        scale: 4,
+        duration: 1,
+        ease: "wiggle.out(0.2, 0.5)",
+        repeat: Infinity,
+        repeatType: "loop",
+      });
 
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
+      //OtherAnim
+      gsap.from(".About_container", {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        ease: "power4.inOut",
+        duration: 2,
+      });
 
-            requestAnimationFrame(raf)
-        </script>
-</body>
+      //TimelineAnim
+      tl
+        //ImageTrans
+        .from(".img", {
+          clipPath: "polygon(82% 0, 82% 0, 19% 100%, 19% 100%)",
+          duration: 1.5,
+          ease: "power4.inOut",
+          delay: 1,
+        })
+        //TittleAnim
+        .from([".char", ".nd"], {
+          y: "300%",
+          stagger: 0.05,
+          duration: 0.5,
+        })
+        .from(".footer_text", {
+          opacity: 0,
+          duration: 0.2,
+        })
+        .from(".btn", {
+          opacity: 0,
+          duration: 0.2,
+        });
 
+      st_about
+        .from(
+          ".pfp",
+          {
+            clipPath: "polygon(50% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%)",
+            duration: 2,
+            ease: "power4.inOut",
+          },
+          1.5,
+        )
+        .from(
+          ".wrapper-bg",
+          {
+            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            duration: 2.2,
+            ease: "none",
+            onComplete: () => {
+              document.querySelector(".wrapper-bg").style.clipPath = "none";
+            },
+          },
+          3,
+        )
+        .from(
+          ".content-pfp",
+          {
+            duration: 2,
+            scale: 0,
+            yPercent: 100,
+            ease: "elastic.out(0.3, 0.4)",
+          },
+          5,
+        )
+        .from(
+          ".wrapper-txt",
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            ease: "power4.inOut",
+            duration: 1.5,
+          },
+          4.6,
+        )
+        .from(
+          ".wrapper-content",
+          {
+            y: 50,
+            opacity: 0,
+            delay: 1,
+            ease: "power4.inOut",
+            duration: 2,
+          },
+          5,
+        )
+        .from(
+          ".pss",
+          {
+            y: 50,
+            opacity: 0,
+            delay: 1,
+            stagger: 0.15,
+            duration: 2,
+            ease: "power3.out",
+          },
+          6,
+        );
+
+      st_project
+        .from(
+          ".eyebrow",
+          {
+            scale: 0,
+          },
+          0.5,
+        )
+        .from(
+          ".wrapper-project",
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            duration: 1.5,
+            ease: "power4.inOut",
+          },
+          1.2,
+        )
+        .from(
+          ".wrapper-textp",
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            duration: 2,
+            ease: "power4.inOut",
+          },
+          1.5,
+        )
+        .from(
+          ".list",
+          {
+            y: 100,
+            opacity: 0,
+            duration: 2,
+            stagger: 0.6,
+            ease: "power3.out",
+          },
+          2.5,
+        );
+
+      function goToContact(e) {
+        e.preventDefault();
+        tl.to("#contact", {
+          opacity: 0,
+          duration: 0.8,
+          ease: "power4.inOut",
+        })
+          .to(".footer_text", {
+            opacity: 0,
+            duration: 0.2,
+          })
+          .to([".char", ".nd"], {
+            y: "300%",
+            stagger: 0.05,
+            duration: 0.5,
+          })
+          .to(".img", {
+            clipPath: "polygon(82% 0, 82% 0, 19% 100%, 19% 100%)",
+            duration: 1.5,
+            ease: "power4.inOut",
+            //   delay: 1,
+            onComplete: () => {
+              window.location.href = "/contact";
+            },
+          });
+      }
+
+      const container = document.querySelector(".Direct_container");
+
+      function goToLibrary(e) {
+        e.preventDefault();
+
+        const initialHeight = container.offsetHeight + 10;
+
+        const tl = gsap.timeline();
+
+        tl.to(".Direct_btn", {
+          rotate: -90,
+          y: -100,
+          duration: 0.5,
+        })
+          .to(
+            ".Direct_container",
+            {
+              height: "100vh",
+              marginTop: `-${initialHeight}px`,
+              duration: 1.5,
+              zIndex: 9999,
+              ease: "power4.inOut",
+            },
+            "-=0.2",
+          )
+          .to(".Direct_font", {
+            opacity: 0,
+            duration: 0.5,
+          })
+          .to(
+            ".Direct_btn",
+            {
+              opacity: 0,
+              duration: 0.5,
+              onComplete: () => {
+                document.documentElement.style.background = "#153378";
+                document.body.style.background = "#153378";
+
+                window.location.href = "/library";
+              },
+            },
+            "-=0.5",
+          );
+      }
+
+      lenis.on("scroll", (e) => {});
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+  </body>
 </html>
